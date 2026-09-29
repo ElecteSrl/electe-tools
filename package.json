@@ -1,0 +1,22 @@
+{
+  "name": "electe-tools",
+  "version": "0.2026.09.29",
+  "description": "The formulas and catalog behind tools.electe.net — free business calculators, in the open.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": "github:ElecteSrl/electe-tools",
+  "homepage": "https://tools.electe.net",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.1",
+    "typescript": "6.0.3",
+    "vitest": "^5.0.1"
+  }
+}

@@ -1,0 +1,3009 @@
+{
+  "generated": "2026-09-29",
+  "source": "electe-migration@0754686",
+  "origin": "https://tools.electe.net",
+  "tools": [
+    {
+      "id": "roi",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "ROI calculator",
+        "it": "Calcolatore ROI"
+      },
+      "summary": {
+        "en": "Work out the return on an investment, and the gain it actually produced.",
+        "it": "Calcola il ritorno di un investimento e il guadagno che ha effettivamente prodotto."
+      },
+      "formula": {
+        "en": "ROI = (amount returned − amount invested) ÷ amount invested",
+        "it": "ROI = (importo rientrato − importo investito) ÷ importo investito"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "investment",
+          "kind": "number",
+          "optional": false,
+          "label": "Amount invested"
+        },
+        {
+          "key": "returned",
+          "kind": "number",
+          "optional": false,
+          "label": "Total amount returned"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "roi",
+          "format": "percent",
+          "primary": true,
+          "label": "Return on investment"
+        },
+        {
+          "key": "netGain",
+          "format": "currency",
+          "primary": false,
+          "label": "Net gain"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/roi-calculator",
+        "it": "https://tools.electe.net/it/calcolo-ritorno-investimento",
+        "fr": "https://tools.electe.net/fr/calculateur-de-roi",
+        "de": "https://tools.electe.net/de/roi-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-roi",
+        "pt": "https://tools.electe.net/pt/calculadora-de-roi",
+        "zh": "https://tools.electe.net/zh/roi-%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/roi-%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/roi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D8%AF-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-roi",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-roi",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93-roi",
+        "pl": "https://tools.electe.net/pl/kalkulator-roi",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-roi",
+        "id": "https://tools.electe.net/id/kalkulator-roi",
+        "nl": "https://tools.electe.net/nl/roi-calculator",
+        "sv": "https://tools.electe.net/sv/roi-kalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-roi",
+        "ko": "https://tools.electe.net/ko/roi-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/roi%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "npv",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "NPV calculator",
+        "it": "Calcolatore VAN"
+      },
+      "summary": {
+        "en": "Discount future cash flows to today's money and see whether a project pays.",
+        "it": "Attualizza i flussi futuri a valore di oggi e vedi se il progetto sta in piedi."
+      },
+      "formula": {
+        "en": "NPV = Σ (cash flow ÷ (1 + rate)^year) − initial investment",
+        "it": "VAN = Σ (flusso ÷ (1 + tasso)^anno) − investimento iniziale"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "investment",
+          "kind": "number",
+          "optional": false,
+          "label": "Initial investment"
+        },
+        {
+          "key": "cashflow",
+          "kind": "number",
+          "optional": false,
+          "label": "Annual cash flow"
+        },
+        {
+          "key": "years",
+          "kind": "integer",
+          "optional": false,
+          "label": "Years"
+        },
+        {
+          "key": "rate",
+          "kind": "percent",
+          "optional": false,
+          "label": "Discount rate (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "npv",
+          "format": "currency",
+          "primary": true,
+          "label": "Net present value"
+        },
+        {
+          "key": "discounted",
+          "format": "currency",
+          "primary": false,
+          "label": "Discounted cash flows"
+        },
+        {
+          "key": "payback",
+          "format": "number",
+          "primary": false,
+          "label": "Payback (years)"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/npv-calculator",
+        "it": "https://tools.electe.net/it/calcolo-valore-attuale-netto",
+        "fr": "https://tools.electe.net/fr/calculateur-de-van",
+        "de": "https://tools.electe.net/de/npv-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-van",
+        "pt": "https://tools.electe.net/pt/calculadora-de-val",
+        "zh": "https://tools.electe.net/zh/npv-%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/npv-%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/npv-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%B5%D8%A7%D9%81%D9%8A-%D8%A7%D9%84%D9%82%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%AD%D8%A7%D9%84%D9%8A%D8%A9",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-npv",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-npv",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93-npv",
+        "pl": "https://tools.electe.net/pl/kalkulator-npv",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-npv",
+        "id": "https://tools.electe.net/id/kalkulator-npv",
+        "nl": "https://tools.electe.net/nl/npv-calculator",
+        "sv": "https://tools.electe.net/sv/npv-kalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-npv",
+        "ko": "https://tools.electe.net/ko/npv-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/npv%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "gross-margin",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Gross margin calculator",
+        "it": "Calcolo margine lordo"
+      },
+      "summary": {
+        "en": "Margin and markup from revenue and cost of goods — they are not the same number.",
+        "it": "Margine e ricarico da ricavi e costo del venduto — due numeri diversi."
+      },
+      "formula": {
+        "en": "Margin % = (revenue − COGS) ÷ revenue    ·    Markup % = (revenue − COGS) ÷ COGS",
+        "it": "Margine % = (ricavi − costo del venduto) ÷ ricavi    ·    Ricarico % = (ricavi − costo del venduto) ÷ costo del venduto"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": false,
+          "label": "Revenue"
+        },
+        {
+          "key": "cogs",
+          "kind": "number",
+          "optional": false,
+          "label": "Cost of goods sold"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "marginPct",
+          "format": "percent",
+          "primary": true,
+          "label": "Gross margin"
+        },
+        {
+          "key": "grossProfit",
+          "format": "currency",
+          "primary": false,
+          "label": "Gross profit"
+        },
+        {
+          "key": "markupPct",
+          "format": "percent",
+          "primary": false,
+          "label": "Markup"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/gross-margin-calculator",
+        "it": "https://tools.electe.net/it/calcolo-margine-lordo",
+        "fr": "https://tools.electe.net/fr/calculateur-de-marge-brute",
+        "de": "https://tools.electe.net/de/bruttomargen-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-margen-bruto",
+        "pt": "https://tools.electe.net/pt/calculadora-de-margem-bruta",
+        "zh": "https://tools.electe.net/zh/%E6%AF%9B%E5%88%A9%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%AF%9B%E5%88%A9%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/brut-marj-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%87%D8%A7%D9%85%D8%B4-%D8%A7%D9%84%D8%B1%D8%A8%D8%AD-%D8%A7%D9%84%D8%A5%D8%AC%D9%85%D8%A7%D9%84%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B2%D0%B0%D0%BB%D0%BE%D0%B2%D0%BE%D1%97-%D0%BC%D0%B0%D1%80%D0%B6%D1%96",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-bien-loi-nhuan-gop",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B3%E0%B9%84%E0%B8%A3%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B9%89%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/kalkulator-marzy-brutto",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A9%D7%95%D7%9C%D7%99-%D7%A8%D7%95%D7%95%D7%97-%D7%92%D7%95%D7%9C%D7%9E%D7%99",
+        "id": "https://tools.electe.net/id/kalkulator-margin-kotor",
+        "nl": "https://tools.electe.net/nl/brutomargecalculator",
+        "sv": "https://tools.electe.net/sv/bruttomarginalkalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-marja-bruta",
+        "ko": "https://tools.electe.net/ko/%EB%A7%A4%EC%B6%9C%EC%B4%9D%EC%9D%B4%EC%9D%B5%EB%A5%A0-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E7%B2%97%E5%88%A9%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "profit",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Profit calculator",
+        "it": "Calcolatore di profitto"
+      },
+      "summary": {
+        "en": "Net profit and margin from revenue, variable costs and fixed costs.",
+        "it": "Utile netto e marginalità da ricavi, costi variabili e costi fissi."
+      },
+      "formula": {
+        "en": "Net profit = revenue − variable costs − fixed costs",
+        "it": "Utile netto = ricavi − costi variabili − costi fissi"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": false,
+          "label": "Revenue"
+        },
+        {
+          "key": "variableCosts",
+          "kind": "number",
+          "optional": false,
+          "label": "Variable costs"
+        },
+        {
+          "key": "fixedCosts",
+          "kind": "number",
+          "optional": false,
+          "label": "Fixed costs"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "netProfit",
+          "format": "currency",
+          "primary": true,
+          "label": "Net profit"
+        },
+        {
+          "key": "contributionMargin",
+          "format": "currency",
+          "primary": false,
+          "label": "Contribution margin"
+        },
+        {
+          "key": "netMarginPct",
+          "format": "percent",
+          "primary": false,
+          "label": "Net margin"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/profit-calculator",
+        "it": "https://tools.electe.net/it/calcolo-profitto",
+        "fr": "https://tools.electe.net/fr/calculateur-de-benefice",
+        "de": "https://tools.electe.net/de/gewinnrechner",
+        "es": "https://tools.electe.net/es/calculadora-de-beneficio",
+        "pt": "https://tools.electe.net/pt/calculadora-de-lucro",
+        "zh": "https://tools.electe.net/zh/%E5%88%A9%E6%B6%A6%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%88%A9%E6%BD%A4%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/kar-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%B1%D8%A8%D8%AD",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%BA%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-loi-nhuan",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%81%E0%B8%B3%E0%B9%84%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/kalkulator-zysku",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A8%D7%95%D7%95%D7%97",
+        "id": "https://tools.electe.net/id/kalkulator-laba",
+        "nl": "https://tools.electe.net/nl/winstcalculator",
+        "sv": "https://tools.electe.net/sv/vinstkalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-profit",
+        "ko": "https://tools.electe.net/ko/%EC%9D%B4%EC%9D%B5-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%88%A9%E7%9B%8A%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "break-even",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Break-even calculator",
+        "it": "Calcolatore punto di pareggio"
+      },
+      "summary": {
+        "en": "How many units you must sell before the fixed costs are covered.",
+        "it": "Quante unità devi vendere prima di aver coperto i costi fissi."
+      },
+      "formula": {
+        "en": "Break-even units = fixed costs ÷ (price per unit − variable cost per unit)",
+        "it": "Unità di pareggio = costi fissi ÷ (prezzo unitario − costo variabile unitario)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "fixedCosts",
+          "kind": "number",
+          "optional": false,
+          "label": "Total fixed costs"
+        },
+        {
+          "key": "price",
+          "kind": "number",
+          "optional": false,
+          "label": "Selling price per unit"
+        },
+        {
+          "key": "variableCost",
+          "kind": "number",
+          "optional": false,
+          "label": "Variable cost per unit"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "breakEvenUnits",
+          "format": "integer",
+          "primary": true,
+          "label": "Break-even units"
+        },
+        {
+          "key": "breakEvenRevenue",
+          "format": "currency",
+          "primary": false,
+          "label": "Break-even revenue"
+        },
+        {
+          "key": "contributionPerUnit",
+          "format": "currency",
+          "primary": false,
+          "label": "Contribution per unit"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/break-even-calculator",
+        "it": "https://tools.electe.net/it/calcolo-punto-di-pareggio",
+        "fr": "https://tools.electe.net/fr/calculateur-de-seuil-de-rentabilite",
+        "de": "https://tools.electe.net/de/break-even-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-punto-de-equilibrio",
+        "pt": "https://tools.electe.net/pt/calculadora-do-ponto-de-equilibrio",
+        "zh": "https://tools.electe.net/zh/%E7%9B%88%E4%BA%8F%E5%B9%B3%E8%A1%A1%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%90%8D%E7%9B%8A%E5%85%A9%E5%B9%B3%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/basabas-noktasi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%86%D9%82%D8%B7%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D8%AF%D9%84",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%82%D0%BE%D1%87%D0%BA%D0%B8-%D0%B1%D0%B5%D0%B7%D0%B7%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%96",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-diem-hoa-von",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%97%E0%B8%B8%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/kalkulator-progu-rentownosci",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A0%D7%A7%D7%95%D7%93%D7%AA-%D7%90%D7%99%D7%96%D7%95%D7%9F",
+        "id": "https://tools.electe.net/id/kalkulator-titik-impas",
+        "nl": "https://tools.electe.net/nl/break-evencalculator",
+        "sv": "https://tools.electe.net/sv/nollpunktskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-prag-de-rentabilitate",
+        "ko": "https://tools.electe.net/ko/%EC%86%90%EC%9D%B5%EB%B6%84%EA%B8%B0%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E6%90%8D%E7%9B%8A%E5%88%86%E5%B2%90%E7%82%B9%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "investment-simulator",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Investment simulator",
+        "it": "Simulatore di investimenti"
+      },
+      "summary": {
+        "en": "Compound a lump sum plus monthly contributions, after fees and inflation.",
+        "it": "Capitalizza un importo iniziale più i versamenti mensili, al netto di costi e inflazione."
+      },
+      "formula": {
+        "en": "Each month: value = value × (1 + monthly rate) + contribution,  monthly rate = (1 + annual return − fees)^(1/12) − 1",
+        "it": "Ogni mese: valore = valore × (1 + tasso mensile) + versamento,  tasso mensile = (1 + rendimento annuo − costi)^(1/12) − 1"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "initial",
+          "kind": "number",
+          "optional": false,
+          "label": "Initial amount"
+        },
+        {
+          "key": "monthly",
+          "kind": "number",
+          "optional": false,
+          "label": "Monthly contribution"
+        },
+        {
+          "key": "years",
+          "kind": "integer",
+          "optional": false,
+          "label": "Years"
+        },
+        {
+          "key": "returnRate",
+          "kind": "percent",
+          "optional": false,
+          "label": "Expected annual return (%)"
+        },
+        {
+          "key": "inflation",
+          "kind": "percent",
+          "optional": true,
+          "label": "Average inflation (%)"
+        },
+        {
+          "key": "fees",
+          "kind": "percent",
+          "optional": true,
+          "label": "Annual fees (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "finalValue",
+          "format": "currency",
+          "primary": true,
+          "label": "Final value"
+        },
+        {
+          "key": "realValue",
+          "format": "currency",
+          "primary": false,
+          "label": "Value in today's money"
+        },
+        {
+          "key": "contributed",
+          "format": "currency",
+          "primary": false,
+          "label": "Total contributed"
+        },
+        {
+          "key": "growth",
+          "format": "currency",
+          "primary": false,
+          "label": "Growth"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/investment-simulator",
+        "it": "https://tools.electe.net/it/simulatore-investimenti",
+        "fr": "https://tools.electe.net/fr/simulateur-d-investissement",
+        "de": "https://tools.electe.net/de/anlagesimulator",
+        "es": "https://tools.electe.net/es/simulador-de-inversion",
+        "pt": "https://tools.electe.net/pt/simulador-de-investimento",
+        "zh": "https://tools.electe.net/zh/%E6%8A%95%E8%B5%84%E6%A8%A1%E6%8B%9F%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%8A%95%E8%B3%87%E6%A8%A1%E6%93%AC%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/yatirim-simulatoru",
+        "ar": "https://tools.electe.net/ar/%D9%85%D8%AD%D8%A7%D9%83%D9%8A-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1",
+        "uk": "https://tools.electe.net/uk/%D1%81%D0%B8%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%96%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D1%96%D0%B9",
+        "vi": "https://tools.electe.net/vi/cong-cu-mo-phong-dau-tu",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B3%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A5%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/symulator-inwestycji",
+        "he": "https://tools.electe.net/he/%D7%A1%D7%99%D7%9E%D7%95%D7%9C%D7%98%D7%95%D7%A8-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/simulator-investasi",
+        "nl": "https://tools.electe.net/nl/beleggingssimulator",
+        "sv": "https://tools.electe.net/sv/investeringssimulator",
+        "ro": "https://tools.electe.net/ro/simulator-de-investitii",
+        "ko": "https://tools.electe.net/ko/%ED%88%AC%EC%9E%90-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0",
+        "ja": "https://tools.electe.net/ja/%E6%8A%95%E8%B3%87%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC"
+      }
+    },
+    {
+      "id": "net-invested-capital",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Net invested capital calculator",
+        "it": "Capitale investito netto"
+      },
+      "summary": {
+        "en": "The capital actually tied up in running the business.",
+        "it": "Il capitale davvero impegnato per far funzionare l'impresa."
+      },
+      "formula": {
+        "en": "Net invested capital = fixed assets + (operating assets − cash − operating liabilities)",
+        "it": "Capitale investito netto = immobilizzazioni + (attività operative − cassa − passività operative)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "fixedAssets",
+          "kind": "number",
+          "optional": false,
+          "label": "Fixed assets"
+        },
+        {
+          "key": "operatingAssets",
+          "kind": "number",
+          "optional": false,
+          "label": "Operating assets"
+        },
+        {
+          "key": "operatingLiabilities",
+          "kind": "number",
+          "optional": false,
+          "label": "Operating liabilities"
+        },
+        {
+          "key": "cash",
+          "kind": "number",
+          "optional": true,
+          "label": "Cash and equivalents"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "nic",
+          "format": "currency",
+          "primary": true,
+          "label": "Net invested capital"
+        },
+        {
+          "key": "workingCapital",
+          "format": "currency",
+          "primary": false,
+          "label": "Operating working capital"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/net-invested-capital-calculator",
+        "it": "https://tools.electe.net/it/capitale-investito-netto",
+        "fr": "https://tools.electe.net/fr/calculateur-de-capital-investi-net",
+        "de": "https://tools.electe.net/de/rechner-fur-investiertes-nettokapital",
+        "es": "https://tools.electe.net/es/calculadora-de-capital-invertido-neto",
+        "pt": "https://tools.electe.net/pt/calculadora-do-capital-investido-liquido",
+        "zh": "https://tools.electe.net/zh/%E5%87%80%E6%8A%95%E5%85%A5%E8%B5%84%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%B7%A8%E6%8A%95%E5%85%A5%E8%B3%87%E6%9C%AC%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/net-yatirilmis-sermaye-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%B5%D8%A7%D9%81%D9%8A-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AB%D9%85%D9%8E%D8%B1",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%87%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE-%D1%96%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BA%D0%B0%D0%BF%D1%96%D1%82%D0%B0%D0%BB%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-von-dau-tu-rong",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A5%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B8%B4",
+        "pl": "https://tools.electe.net/pl/kalkulator-kapitalu-zainwestowanego-netto",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%94%D7%95%D7%9F-%D7%9E%D7%95%D7%A9%D7%A7%D7%A2-%D7%A0%D7%98%D7%95",
+        "id": "https://tools.electe.net/id/kalkulator-modal-terinvestasi-bersih",
+        "nl": "https://tools.electe.net/nl/calculator-netto-geinvesteerd-vermogen",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-nettoinvesterat-kapital",
+        "ro": "https://tools.electe.net/ro/calculator-de-capital-investit-net",
+        "ko": "https://tools.electe.net/ko/%EC%88%9C%ED%88%AC%ED%95%98%EC%9E%90%EB%B3%B8-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E7%B4%94%E6%8A%95%E4%B8%8B%E8%B3%87%E6%9C%AC%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "reverse-factoring",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Reverse factoring calculator",
+        "it": "Calcolatore reverse factoring"
+      },
+      "summary": {
+        "en": "What early payment costs a supplier, and what the extension is worth to you.",
+        "it": "Quanto costa al fornitore l'incasso anticipato e quanto vale a te la dilazione."
+      },
+      "formula": {
+        "en": "Discount = invoice value × rate × (days ÷ 365)",
+        "it": "Sconto = importo fattura × tasso × (giorni ÷ 365)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "invoiceValue",
+          "kind": "number",
+          "optional": false,
+          "label": "Total invoice value"
+        },
+        {
+          "key": "extensionDays",
+          "kind": "integer",
+          "optional": false,
+          "label": "Days paid early"
+        },
+        {
+          "key": "discountRate",
+          "kind": "percent",
+          "optional": false,
+          "label": "Discount rate (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "financingCost",
+          "format": "currency",
+          "primary": true,
+          "label": "Discount cost"
+        },
+        {
+          "key": "netToSupplier",
+          "format": "currency",
+          "primary": false,
+          "label": "Net to supplier"
+        },
+        {
+          "key": "effectiveAnnualRate",
+          "format": "percent",
+          "primary": false,
+          "label": "Effective annual rate"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/reverse-factoring-calculator",
+        "it": "https://tools.electe.net/it/reverse-factoring",
+        "fr": "https://tools.electe.net/fr/calculateur-d-affacturage-inverse",
+        "de": "https://tools.electe.net/de/reverse-factoring-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-factoring-inverso",
+        "pt": "https://tools.electe.net/pt/calculadora-de-factoring-inverso",
+        "zh": "https://tools.electe.net/zh/%E5%8F%8D%E5%90%91%E4%BF%9D%E7%90%86%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%8F%8D%E5%90%91%E4%BF%9D%E7%90%86%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/ters-faktoring-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D9%8A%D9%85-%D8%A7%D9%84%D8%B9%D9%83%D8%B3%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B7%D0%B2%D0%BE%D1%80%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-bao-thanh-toan-nguoc",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%81%E0%B8%9F%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%87",
+        "pl": "https://tools.electe.net/pl/kalkulator-faktoringu-odwrotnego",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A4%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%A0%D7%92-%D7%94%D7%A4%D7%95%D7%9A",
+        "id": "https://tools.electe.net/id/kalkulator-reverse-factoring",
+        "nl": "https://tools.electe.net/nl/reverse-factoringcalculator",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-omvand-factoring",
+        "ro": "https://tools.electe.net/ro/calculator-de-factoring-invers",
+        "ko": "https://tools.electe.net/ko/%EC%97%AD%ED%8C%A9%ED%86%A0%EB%A7%81-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%AF%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "reorder-point",
+      "category": "inventory",
+      "kind": "calculator",
+      "name": {
+        "en": "Reorder point calculator",
+        "it": "Calcolatore punto di riordino"
+      },
+      "summary": {
+        "en": "The stock level at which you place the next order.",
+        "it": "Il livello di scorta a cui emettere il prossimo ordine."
+      },
+      "formula": {
+        "en": "Reorder point = average daily demand × lead time (days) + safety stock",
+        "it": "Punto di riordino = domanda media giornaliera × tempo di consegna (giorni) + scorta di sicurezza"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "dailyDemand",
+          "kind": "number",
+          "optional": false,
+          "label": "Average daily demand"
+        },
+        {
+          "key": "leadTime",
+          "kind": "number",
+          "optional": false,
+          "label": "Supplier lead time (days)"
+        },
+        {
+          "key": "safetyStock",
+          "kind": "number",
+          "optional": true,
+          "label": "Safety stock"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "reorderPoint",
+          "format": "integer",
+          "primary": true,
+          "label": "Reorder point"
+        },
+        {
+          "key": "leadTimeDemand",
+          "format": "integer",
+          "primary": false,
+          "label": "Demand during lead time"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/reorder-point-calculator",
+        "it": "https://tools.electe.net/it/punto-di-riordino",
+        "fr": "https://tools.electe.net/fr/calculateur-de-point-de-commande",
+        "de": "https://tools.electe.net/de/meldebestand-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-punto-de-pedido",
+        "pt": "https://tools.electe.net/pt/calculadora-do-ponto-de-encomenda",
+        "zh": "https://tools.electe.net/zh/%E5%86%8D%E8%AE%A2%E8%B4%A7%E7%82%B9%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%86%8D%E8%A8%82%E8%B3%BC%E9%BB%9E%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/yeniden-siparis-noktasi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%86%D9%82%D8%B7%D8%A9-%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B7%D9%84%D8%A8",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%82%D0%BE%D1%87%D0%BA%D0%B8-%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-diem-dat-hang-lai",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88",
+        "pl": "https://tools.electe.net/pl/kalkulator-punktu-ponownego-zamowienia",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A0%D7%A7%D7%95%D7%93%D7%AA-%D7%94%D7%96%D7%9E%D7%A0%D7%94",
+        "id": "https://tools.electe.net/id/kalkulator-titik-pemesanan-ulang",
+        "nl": "https://tools.electe.net/nl/bestelpuntcalculator",
+        "sv": "https://tools.electe.net/sv/bestallningspunktskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-pentru-punctul-de-recomanda",
+        "ko": "https://tools.electe.net/ko/%EC%9E%AC%EC%A3%BC%EB%AC%B8%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E7%99%BA%E6%B3%A8%E7%82%B9%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "inventory-turnover",
+      "category": "inventory",
+      "kind": "calculator",
+      "name": {
+        "en": "Inventory turnover calculator",
+        "it": "Calcolatore rotazione scorte"
+      },
+      "summary": {
+        "en": "How many times a year your stock sells through, and how long it sits.",
+        "it": "Quante volte l'anno ruota il magazzino e quanti giorni resta fermo."
+      },
+      "formula": {
+        "en": "Turnover = COGS ÷ average inventory value    ·    Days = 365 ÷ turnover",
+        "it": "Rotazione = costo del venduto ÷ valore medio delle scorte    ·    Giorni = 365 ÷ rotazione"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "cogs",
+          "kind": "number",
+          "optional": false,
+          "label": "Cost of goods sold"
+        },
+        {
+          "key": "averageInventory",
+          "kind": "number",
+          "optional": false,
+          "label": "Average inventory value"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "turnover",
+          "format": "number",
+          "primary": true,
+          "label": "Inventory turnover"
+        },
+        {
+          "key": "daysOfInventory",
+          "format": "days",
+          "primary": false,
+          "label": "Days of inventory"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/inventory-turnover-calculator",
+        "it": "https://tools.electe.net/it/rotazione-scorte",
+        "fr": "https://tools.electe.net/fr/calculateur-de-rotation-des-stocks",
+        "de": "https://tools.electe.net/de/lagerumschlag-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-rotacion-de-inventario",
+        "pt": "https://tools.electe.net/pt/calculadora-de-rotacao-de-stocks",
+        "zh": "https://tools.electe.net/zh/%E5%BA%93%E5%AD%98%E5%91%A8%E8%BD%AC%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%AD%98%E8%B2%A8%E9%80%B1%E8%BD%89%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/stok-devir-hizi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%85%D8%B9%D8%AF%D9%84-%D8%AF%D9%88%D8%B1%D8%A7%D9%86-%D8%A7%D9%84%D9%85%D8%AE%D8%B2%D9%88%D9%86",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BE%D0%B1%D0%BE%D1%80%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D0%B7%D0%B0%D0%BF%D0%B0%D1%81%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-vong-quay-hang-ton-kho",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B8%87",
+        "pl": "https://tools.electe.net/pl/kalkulator-rotacji-zapasow",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%9E%D7%97%D7%96%D7%95%D7%A8-%D7%9E%D7%9C%D7%90%D7%99",
+        "id": "https://tools.electe.net/id/kalkulator-perputaran-persediaan",
+        "nl": "https://tools.electe.net/nl/calculator-voorraadomloopsnelheid",
+        "sv": "https://tools.electe.net/sv/lageromsattningskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-rotatie-a-stocurilor",
+        "ko": "https://tools.electe.net/ko/%EC%9E%AC%EA%B3%A0%ED%9A%8C%EC%A0%84%EC%9C%A8-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%9C%A8%E5%BA%AB%E5%9B%9E%E8%BB%A2%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "days-inventory",
+      "category": "inventory",
+      "kind": "calculator",
+      "name": {
+        "en": "Days inventory on hand",
+        "it": "Giorni di giacenza magazzino"
+      },
+      "summary": {
+        "en": "How many days of sales your current stock represents.",
+        "it": "A quanti giorni di vendite corrisponde la scorta attuale."
+      },
+      "formula": {
+        "en": "Days inventory = (average inventory ÷ COGS) × days in period",
+        "it": "Giorni di giacenza = (scorte medie ÷ costo del venduto) × giorni del periodo"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "averageInventory",
+          "kind": "number",
+          "optional": false,
+          "label": "Average inventory value"
+        },
+        {
+          "key": "cogs",
+          "kind": "number",
+          "optional": false,
+          "label": "Cost of goods sold"
+        },
+        {
+          "key": "periodDays",
+          "kind": "integer",
+          "optional": false,
+          "label": "Days in period"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "dio",
+          "format": "days",
+          "primary": true,
+          "label": "Days inventory on hand"
+        },
+        {
+          "key": "turnover",
+          "format": "number",
+          "primary": false,
+          "label": "Inventory turnover"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/days-inventory-on-hand",
+        "it": "https://tools.electe.net/it/giorni-di-giacenza-magazzino",
+        "fr": "https://tools.electe.net/fr/jours-de-stock-disponible",
+        "de": "https://tools.electe.net/de/lagerreichweite-in-tagen",
+        "es": "https://tools.electe.net/es/dias-de-inventario-disponible",
+        "pt": "https://tools.electe.net/pt/dias-de-stock-em-armazem",
+        "zh": "https://tools.electe.net/zh/%E5%BA%93%E5%AD%98%E6%8C%81%E6%9C%89%E5%A4%A9%E6%95%B0",
+        "tc": "https://tools.electe.net/tc/%E5%AD%98%E8%B2%A8%E5%9C%A8%E6%89%8B%E5%A4%A9%E6%95%B8",
+        "tr": "https://tools.electe.net/tr/eldeki-stok-gun-sayisi",
+        "ar": "https://tools.electe.net/ar/%D8%A3%D9%8A%D8%A7%D9%85-%D8%A7%D9%84%D9%85%D8%AE%D8%B2%D9%88%D9%86-%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD",
+        "uk": "https://tools.electe.net/uk/%D0%B4%D0%BD%D1%96%D0%B2-%D0%B7%D0%B0%D0%BF%D0%B0%D1%81%D1%83-%D0%B2-%D0%BD%D0%B0%D1%8F%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96",
+        "vi": "https://tools.electe.net/vi/so-ngay-ton-kho-hien-co",
+        "th": "https://tools.electe.net/th/%E0%B8%88%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD",
+        "pl": "https://tools.electe.net/pl/zapas-w-dniach",
+        "he": "https://tools.electe.net/he/%D7%99%D7%9E%D7%99-%D7%9E%D7%9C%D7%90%D7%99-%D7%91%D7%9E%D7%97%D7%A1%D7%9F",
+        "id": "https://tools.electe.net/id/hari-persediaan-tersedia",
+        "nl": "https://tools.electe.net/nl/voorraaddagen",
+        "sv": "https://tools.electe.net/sv/lagerdagar",
+        "ro": "https://tools.electe.net/ro/zile-de-stoc-disponibil",
+        "ko": "https://tools.electe.net/ko/%EC%9E%AC%EA%B3%A0%EB%B3%B4%EC%9C%A0%EC%9D%BC%EC%88%98",
+        "ja": "https://tools.electe.net/ja/%E5%9C%A8%E5%BA%AB%E6%97%A5%E6%95%B0"
+      }
+    },
+    {
+      "id": "sell-through",
+      "category": "inventory",
+      "kind": "calculator",
+      "name": {
+        "en": "Sell-through rate calculator",
+        "it": "Tasso di vendita (sell-through)"
+      },
+      "summary": {
+        "en": "The share of what you received that has actually sold.",
+        "it": "La quota di ciò che hai ricevuto che è stata effettivamente venduta."
+      },
+      "formula": {
+        "en": "Sell-through % = units sold ÷ units received",
+        "it": "Sell-through % = pezzi venduti ÷ pezzi ricevuti"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "unitsReceived",
+          "kind": "integer",
+          "optional": false,
+          "label": "Units received"
+        },
+        {
+          "key": "unitsSold",
+          "kind": "integer",
+          "optional": false,
+          "label": "Units sold"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "sellThrough",
+          "format": "percent",
+          "primary": true,
+          "label": "Sell-through rate"
+        },
+        {
+          "key": "unitsRemaining",
+          "format": "integer",
+          "primary": false,
+          "label": "Units remaining"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/sell-through-rate-calculator",
+        "it": "https://tools.electe.net/it/tasso-di-vendita-sell-through",
+        "fr": "https://tools.electe.net/fr/calculateur-de-taux-d-ecoulement",
+        "de": "https://tools.electe.net/de/rechner-fur-die-abverkaufsquote",
+        "es": "https://tools.electe.net/es/calculadora-de-tasa-de-sell-through",
+        "pt": "https://tools.electe.net/pt/calculadora-da-taxa-de-sell-through",
+        "zh": "https://tools.electe.net/zh/%E5%94%AE%E7%BD%84%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%94%AE%E7%BD%84%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/sell-through-orani-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%85%D8%B9%D8%AF%D9%84-%D8%A7%D9%84%D8%AA%D8%B5%D8%B1%D9%8A%D9%81",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82%D0%B0-%D1%80%D0%BE%D0%B7%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-ty-le-tieu-thu",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%AD%E0%B8%AD%E0%B8%81",
+        "pl": "https://tools.electe.net/pl/kalkulator-wskaznika-wyprzedazy",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A9%D7%99%D7%A2%D7%95%D7%A8-%D7%9E%D7%9B%D7%99%D7%A8%D7%94-%D7%9E%D7%94%D7%9E%D7%9C%D7%90%D7%99",
+        "id": "https://tools.electe.net/id/kalkulator-tingkat-sell-through",
+        "nl": "https://tools.electe.net/nl/sell-throughcalculator",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-utforsaljningsgrad",
+        "ro": "https://tools.electe.net/ro/calculator-de-rata-de-sell-through",
+        "ko": "https://tools.electe.net/ko/%ED%8C%90%EB%A7%A4-%EC%86%8C%EC%A7%84%EC%9C%A8-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E6%B6%88%E5%8C%96%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "aov",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Average order value calculator",
+        "it": "Calcolatore valore medio ordine"
+      },
+      "summary": {
+        "en": "What a typical order is worth.",
+        "it": "Quanto vale un ordine tipico."
+      },
+      "formula": {
+        "en": "Average order value = total revenue ÷ number of orders",
+        "it": "Valore medio ordine = ricavi totali ÷ numero di ordini"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": false,
+          "label": "Total revenue"
+        },
+        {
+          "key": "orders",
+          "kind": "integer",
+          "optional": false,
+          "label": "Number of orders"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "aov",
+          "format": "currency",
+          "primary": true,
+          "label": "Average order value"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/aov-calculator",
+        "it": "https://tools.electe.net/it/calcolo-valore-medio-ordine",
+        "fr": "https://tools.electe.net/fr/calculateur-de-panier-moyen",
+        "de": "https://tools.electe.net/de/rechner-fur-den-durchschnittlichen-bestellwert",
+        "es": "https://tools.electe.net/es/calculadora-de-valor-medio-del-pedido",
+        "pt": "https://tools.electe.net/pt/calculadora-do-valor-medio-da-encomenda",
+        "zh": "https://tools.electe.net/zh/%E5%B9%B3%E5%9D%87%E8%AE%A2%E5%8D%95%E9%87%91%E9%A2%9D%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%B9%B3%E5%9D%87%E8%A8%82%E5%96%AE%E9%87%91%E9%A1%8D%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/ortalama-siparis-degeri-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D9%82%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%B7%D9%84%D8%A8",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D1%8C%D0%BE%D1%97-%D0%B2%D0%B0%D1%80%D1%82%D0%BE%D1%81%D1%82%D1%96-%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-gia-tri-don-hang-trung-binh",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2",
+        "pl": "https://tools.electe.net/pl/kalkulator-sredniej-wartosci-zamowienia",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A2%D7%A8%D7%9A-%D7%94%D7%96%D7%9E%D7%A0%D7%94-%D7%9E%D7%9E%D7%95%D7%A6%D7%A2",
+        "id": "https://tools.electe.net/id/kalkulator-nilai-pesanan-rata-rata",
+        "nl": "https://tools.electe.net/nl/calculator-gemiddelde-orderwaarde",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-genomsnittligt-ordervarde",
+        "ro": "https://tools.electe.net/ro/calculator-de-valoare-medie-a-comenzii",
+        "ko": "https://tools.electe.net/ko/%ED%8F%89%EA%B7%A0-%EC%A3%BC%EB%AC%B8-%EA%B8%88%EC%95%A1-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%B9%B3%E5%9D%87%E6%B3%A8%E6%96%87%E5%8D%98%E4%BE%A1%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "conversion-rate",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Sales conversion calculator",
+        "it": "Calcolatore tasso di conversione"
+      },
+      "summary": {
+        "en": "Conversion rate, and what a lead is actually worth.",
+        "it": "Tasso di conversione e quanto vale davvero un contatto."
+      },
+      "formula": {
+        "en": "Conversion rate = conversions ÷ total leads or visitors",
+        "it": "Tasso di conversione = conversioni ÷ contatti o visitatori totali"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "conversions",
+          "kind": "integer",
+          "optional": false,
+          "label": "Conversions"
+        },
+        {
+          "key": "total",
+          "kind": "integer",
+          "optional": false,
+          "label": "Total leads or visitors"
+        },
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": true,
+          "label": "Revenue generated"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "conversionRate",
+          "format": "percent",
+          "primary": true,
+          "label": "Conversion rate"
+        },
+        {
+          "key": "revenuePerLead",
+          "format": "currency",
+          "primary": false,
+          "label": "Revenue per lead"
+        },
+        {
+          "key": "valuePerConversion",
+          "format": "currency",
+          "primary": false,
+          "label": "Value per conversion"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/sales-conversion-calculator",
+        "it": "https://tools.electe.net/it/calcolo-tasso-di-conversione",
+        "fr": "https://tools.electe.net/fr/calculateur-de-conversion-commerciale",
+        "de": "https://tools.electe.net/de/sales-conversion-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-conversion-de-ventas",
+        "pt": "https://tools.electe.net/pt/calculadora-de-conversao-de-vendas",
+        "zh": "https://tools.electe.net/zh/%E9%94%80%E5%94%AE%E8%BD%AC%E5%8C%96%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E9%8A%B7%E5%94%AE%E8%BD%89%E6%8F%9B%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/satis-donusum-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D8%AD%D9%88%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D1%96%D1%97-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-chuyen-doi-ban-hang",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%B2%E0%B8%A2",
+        "pl": "https://tools.electe.net/pl/kalkulator-konwersji-sprzedazy",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%94%D7%9E%D7%A8%D7%95%D7%AA-%D7%9E%D7%9B%D7%99%D7%A8%D7%94",
+        "id": "https://tools.electe.net/id/kalkulator-konversi-penjualan",
+        "nl": "https://tools.electe.net/nl/verkoopconversiecalculator",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-saljkonvertering",
+        "ro": "https://tools.electe.net/ro/calculator-de-conversie-in-vanzari",
+        "ko": "https://tools.electe.net/ko/%EC%98%81%EC%97%85-%EC%A0%84%ED%99%98%EC%9C%A8-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%82%BB%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "customer-lifetime-value",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Customer lifetime value calculator",
+        "it": "Calcolatore lifetime value"
+      },
+      "summary": {
+        "en": "What a customer is worth over the whole relationship.",
+        "it": "Quanto vale un cliente sull'intera relazione."
+      },
+      "formula": {
+        "en": "CLV = average order value × purchases per year × years retained",
+        "it": "CLV = valore medio ordine × acquisti all'anno × anni di permanenza"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "averageOrderValue",
+          "kind": "number",
+          "optional": false,
+          "label": "Average order value"
+        },
+        {
+          "key": "purchasesPerYear",
+          "kind": "number",
+          "optional": false,
+          "label": "Purchases per year"
+        },
+        {
+          "key": "yearsRetained",
+          "kind": "number",
+          "optional": false,
+          "label": "Years retained"
+        },
+        {
+          "key": "grossMargin",
+          "kind": "percent",
+          "optional": true,
+          "label": "Gross margin (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "clv",
+          "format": "currency",
+          "primary": true,
+          "label": "Lifetime value (revenue)"
+        },
+        {
+          "key": "annualValue",
+          "format": "currency",
+          "primary": false,
+          "label": "Annual value"
+        },
+        {
+          "key": "marginClv",
+          "format": "currency",
+          "primary": false,
+          "label": "Lifetime value (margin)"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/customer-lifetime-value-calculator",
+        "it": "https://tools.electe.net/it/calcolo-valore-cliente-lifetime",
+        "fr": "https://tools.electe.net/fr/calculateur-de-valeur-vie-client",
+        "de": "https://tools.electe.net/de/rechner-fur-den-customer-lifetime-value",
+        "es": "https://tools.electe.net/es/calculadora-de-valor-de-vida-del-cliente",
+        "pt": "https://tools.electe.net/pt/calculadora-do-valor-vitalicio-do-cliente",
+        "zh": "https://tools.electe.net/zh/%E5%AE%A2%E6%88%B7%E7%BB%88%E8%BA%AB%E4%BB%B7%E5%80%BC%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E9%A1%A7%E5%AE%A2%E7%B5%82%E8%BA%AB%E5%83%B9%E5%80%BC%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/musteri-yasam-boyu-degeri-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D9%82%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%AF%D8%A7%D8%A6%D9%85%D8%A9-%D9%84%D9%84%D8%B9%D9%85%D9%8A%D9%84",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B4%D0%BE%D0%B2%D1%96%D1%87%D0%BD%D0%BE%D1%97-%D1%86%D1%96%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D0%BA%D0%BB%D1%96%D1%94%D0%BD%D1%82%D0%B0",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-gia-tri-vong-doi-khach-hang",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%84%E0%B9%89%E0%B8%B2",
+        "pl": "https://tools.electe.net/pl/kalkulator-wartosci-zyciowej-klienta",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A2%D7%A8%D7%9A-%D7%97%D7%99%D7%99-%D7%9C%D7%A7%D7%95%D7%97",
+        "id": "https://tools.electe.net/id/kalkulator-nilai-seumur-hidup-pelanggan",
+        "nl": "https://tools.electe.net/nl/calculator-klantwaarde-clv",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-kundlivstidsvarde",
+        "ro": "https://tools.electe.net/ro/calculator-de-valoare-pe-durata-de-viata-a-clientului",
+        "ko": "https://tools.electe.net/ko/%EA%B3%A0%EA%B0%9D%EC%83%9D%EC%95%A0%EA%B0%80%EC%B9%98-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E9%A1%A7%E5%AE%A2%E7%94%9F%E6%B6%AF%E4%BE%A1%E5%80%A4%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "churn-rate",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Churn rate calculator",
+        "it": "Calcolatore tasso di abbandono"
+      },
+      "summary": {
+        "en": "The share of customers who left, and the retention behind it.",
+        "it": "La quota di clienti persi e la fidelizzazione che c'è dietro."
+      },
+      "formula": {
+        "en": "Churn % = (customers at start + acquired − customers at end) ÷ customers at start",
+        "it": "Churn % = (clienti iniziali + acquisiti − clienti finali) ÷ clienti iniziali"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "customersStart",
+          "kind": "integer",
+          "optional": false,
+          "label": "Customers at start"
+        },
+        {
+          "key": "customersEnd",
+          "kind": "integer",
+          "optional": false,
+          "label": "Customers at end"
+        },
+        {
+          "key": "customersAcquired",
+          "kind": "integer",
+          "optional": true,
+          "label": "Customers acquired"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "churnRate",
+          "format": "percent",
+          "primary": true,
+          "label": "Churn rate"
+        },
+        {
+          "key": "churnedCustomers",
+          "format": "integer",
+          "primary": false,
+          "label": "Customers lost"
+        },
+        {
+          "key": "retentionRate",
+          "format": "percent",
+          "primary": false,
+          "label": "Retention rate"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/churn-rate-calculator",
+        "it": "https://tools.electe.net/it/calcolo-tasso-di-abbandono",
+        "fr": "https://tools.electe.net/fr/calculateur-de-taux-d-attrition",
+        "de": "https://tools.electe.net/de/churn-rate-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-tasa-de-churn",
+        "pt": "https://tools.electe.net/pt/calculadora-da-taxa-de-churn",
+        "zh": "https://tools.electe.net/zh/%E5%AE%A2%E6%88%B7%E6%B5%81%E5%A4%B1%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%B5%81%E5%A4%B1%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/musteri-kayip-orani-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%85%D8%B9%D8%AF%D9%84-%D8%A7%D9%84%D8%AA%D8%B3%D8%B1%D9%91%D8%A8",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%80%D1%96%D0%B2%D0%BD%D1%8F-%D0%B2%D1%96%D0%B4%D1%82%D0%BE%D0%BA%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-ty-le-roi-bo",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B9%E0%B8%8D%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%84%E0%B9%89%E0%B8%B2",
+        "pl": "https://tools.electe.net/pl/kalkulator-wskaznika-rezygnacji",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A9%D7%99%D7%A2%D7%95%D7%A8-%D7%A0%D7%98%D7%99%D7%A9%D7%94",
+        "id": "https://tools.electe.net/id/kalkulator-tingkat-churn",
+        "nl": "https://tools.electe.net/nl/churncalculator",
+        "sv": "https://tools.electe.net/sv/churn-kalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-rata-de-churn",
+        "ko": "https://tools.electe.net/ko/%EC%9D%B4%ED%83%88%EB%A5%A0-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E8%A7%A3%E7%B4%84%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "percentage-discount",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Percentage discount calculator",
+        "it": "Calcolo sconto percentuale"
+      },
+      "summary": {
+        "en": "Final price and saving from a percentage off.",
+        "it": "Prezzo finale e risparmio a partire da uno sconto in percentuale."
+      },
+      "formula": {
+        "en": "Saving = original price × discount %    ·    Final price = original price − saving",
+        "it": "Risparmio = prezzo di listino × sconto %    ·    Prezzo finale = prezzo di listino − risparmio"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "originalPrice",
+          "kind": "number",
+          "optional": false,
+          "label": "Original price"
+        },
+        {
+          "key": "discountPercent",
+          "kind": "percent",
+          "optional": false,
+          "label": "Discount (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "finalPrice",
+          "format": "currency",
+          "primary": true,
+          "label": "Final price"
+        },
+        {
+          "key": "saving",
+          "format": "currency",
+          "primary": false,
+          "label": "You save"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/percentage-discount-calculator",
+        "it": "https://tools.electe.net/it/sconto-percentuale",
+        "fr": "https://tools.electe.net/fr/calculateur-de-remise-en-pourcentage",
+        "de": "https://tools.electe.net/de/prozentrabatt-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-descuento-porcentual",
+        "pt": "https://tools.electe.net/pt/calculadora-de-desconto-percentual",
+        "zh": "https://tools.electe.net/zh/%E7%99%BE%E5%88%86%E6%AF%94%E6%8A%98%E6%89%A3%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%8A%98%E6%89%A3%E7%99%BE%E5%88%86%E6%AF%94%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/yuzde-indirim-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%85-%D8%A7%D9%84%D9%85%D8%A6%D9%88%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B2%D1%96%D0%B4%D1%81%D0%BE%D1%82%D0%BA%D0%BE%D0%B2%D0%BE%D1%97-%D0%B7%D0%BD%D0%B8%D0%B6%D0%BA%D0%B8",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-giam-gia-theo-phan-tram",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%A5%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%95%E0%B9%8C",
+        "pl": "https://tools.electe.net/pl/kalkulator-rabatu-procentowego",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%94%D7%A0%D7%97%D7%94-%D7%91%D7%90%D7%97%D7%95%D7%96%D7%99%D7%9D",
+        "id": "https://tools.electe.net/id/kalkulator-diskon-persentase",
+        "nl": "https://tools.electe.net/nl/kortingscalculator",
+        "sv": "https://tools.electe.net/sv/rabattkalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-reducere-procentuala",
+        "ko": "https://tools.electe.net/ko/%ED%95%A0%EC%9D%B8%EC%9C%A8-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%89%B2%E5%BC%95%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "nps",
+      "category": "marketing",
+      "kind": "calculator",
+      "name": {
+        "en": "NPS calculator",
+        "it": "Calcolatore NPS"
+      },
+      "summary": {
+        "en": "Net Promoter Score from your promoter, passive and detractor counts.",
+        "it": "Net Promoter Score da promotori, passivi e detrattori."
+      },
+      "formula": {
+        "en": "NPS = % promoters − % detractors    (passives count in the total, and nowhere else)",
+        "it": "NPS = % promotori − % detrattori    (i passivi entrano nel totale, e in nient'altro)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "promoters",
+          "kind": "integer",
+          "optional": false,
+          "label": "Promoters (9-10)"
+        },
+        {
+          "key": "passives",
+          "kind": "integer",
+          "optional": false,
+          "label": "Passives (7-8)"
+        },
+        {
+          "key": "detractors",
+          "kind": "integer",
+          "optional": false,
+          "label": "Detractors (0-6)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "nps",
+          "format": "number",
+          "primary": true,
+          "label": "Net Promoter Score"
+        },
+        {
+          "key": "promoterPct",
+          "format": "percent",
+          "primary": false,
+          "label": "Promoters"
+        },
+        {
+          "key": "detractorPct",
+          "format": "percent",
+          "primary": false,
+          "label": "Detractors"
+        },
+        {
+          "key": "responses",
+          "format": "integer",
+          "primary": false,
+          "label": "Total responses"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/nps-calculator",
+        "it": "https://tools.electe.net/it/net-promoter-score",
+        "fr": "https://tools.electe.net/fr/calculateur-de-nps",
+        "de": "https://tools.electe.net/de/nps-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-nps",
+        "pt": "https://tools.electe.net/pt/calculadora-de-nps",
+        "zh": "https://tools.electe.net/zh/nps-%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/nps-%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/nps-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-nps",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-nps",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-nps",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93-nps",
+        "pl": "https://tools.electe.net/pl/kalkulator-nps",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-nps",
+        "id": "https://tools.electe.net/id/kalkulator-nps",
+        "nl": "https://tools.electe.net/nl/nps-calculator",
+        "sv": "https://tools.electe.net/sv/nps-kalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-nps",
+        "ko": "https://tools.electe.net/ko/nps-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/nps%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "employee-productivity",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "Employee productivity calculator",
+        "it": "Calcolatore produttività dei dipendenti"
+      },
+      "summary": {
+        "en": "Output per employee, per hour, and against the wage bill.",
+        "it": "Produzione per dipendente, per ora e rispetto al costo del lavoro."
+      },
+      "formula": {
+        "en": "Per employee = output ÷ employees    ·    Per hour = output ÷ (employees × hours each)",
+        "it": "Per dipendente = produzione ÷ dipendenti    ·    Per ora = produzione ÷ (dipendenti × ore ciascuno)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "output",
+          "kind": "number",
+          "optional": false,
+          "label": "Output (revenue or gross profit)"
+        },
+        {
+          "key": "employees",
+          "kind": "number",
+          "optional": false,
+          "label": "Employees (full-time equivalent)"
+        },
+        {
+          "key": "hoursPerEmployee",
+          "kind": "number",
+          "optional": true,
+          "label": "Hours per employee"
+        },
+        {
+          "key": "labourCost",
+          "kind": "number",
+          "optional": true,
+          "label": "Total labour cost"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "perEmployee",
+          "format": "currency",
+          "primary": true,
+          "label": "Output per employee"
+        },
+        {
+          "key": "perHour",
+          "format": "currency",
+          "primary": false,
+          "label": "Output per hour"
+        },
+        {
+          "key": "labourRatio",
+          "format": "number",
+          "primary": false,
+          "label": "Output per unit of labour cost"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/employee-productivity-calculator",
+        "it": "https://tools.electe.net/it/calcolo-produttivita-dipendente",
+        "fr": "https://tools.electe.net/fr/calculateur-de-productivite-des-salaries",
+        "de": "https://tools.electe.net/de/rechner-fur-mitarbeiterproduktivitat",
+        "es": "https://tools.electe.net/es/calculadora-de-productividad-de-empleados",
+        "pt": "https://tools.electe.net/pt/calculadora-de-produtividade-dos-colaboradores",
+        "zh": "https://tools.electe.net/zh/%E5%91%98%E5%B7%A5%E7%94%9F%E4%BA%A7%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%93%A1%E5%B7%A5%E7%94%9F%E7%94%A2%E5%8A%9B%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/calisan-verimliligi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%86",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-nang-suat-nhan-vien",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9E%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/kalkulator-produktywnosci-pracownikow",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A4%D7%A8%D7%99%D7%95%D7%9F-%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D",
+        "id": "https://tools.electe.net/id/kalkulator-produktivitas-karyawan",
+        "nl": "https://tools.electe.net/nl/calculator-medewerkersproductiviteit",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-personalproduktivitet",
+        "ro": "https://tools.electe.net/ro/calculator-de-productivitate-a-angajatilor",
+        "ko": "https://tools.electe.net/ko/%EC%A7%81%EC%9B%90-%EC%83%9D%EC%82%B0%EC%84%B1-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%BE%93%E6%A5%AD%E5%93%A1%E7%94%9F%E7%94%A3%E6%80%A7%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "renovation-cost",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "Renovation cost calculator",
+        "it": "Calcolatore costo ristrutturazione"
+      },
+      "summary": {
+        "en": "A per-square-metre estimate with systems and contingency.",
+        "it": "Una stima al metro quadro con impianti e imprevisti."
+      },
+      "formula": {
+        "en": "Total = area × rate per m² × (1 + systems %) × (1 + contingency %)",
+        "it": "Totale = superficie × costo al m² × (1 + impianti %) × (1 + imprevisti %)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "squareMetres",
+          "kind": "number",
+          "optional": false,
+          "label": "Floor area (m²)"
+        },
+        {
+          "key": "ratePerSqm",
+          "kind": "number",
+          "optional": false,
+          "label": "Rate per m²"
+        },
+        {
+          "key": "systemsUpliftPct",
+          "kind": "percent",
+          "optional": true,
+          "label": "Systems uplift (%)"
+        },
+        {
+          "key": "contingencyPct",
+          "kind": "percent",
+          "optional": true,
+          "label": "Contingency (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "total",
+          "format": "currency",
+          "primary": true,
+          "label": "Estimated total"
+        },
+        {
+          "key": "baseCost",
+          "format": "currency",
+          "primary": false,
+          "label": "Base cost"
+        },
+        {
+          "key": "effectivePerSqm",
+          "format": "currency",
+          "primary": false,
+          "label": "Effective cost per m²"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/renovation-cost-calculator",
+        "it": "https://tools.electe.net/it/costo-al-mq-ristrutturazione",
+        "fr": "https://tools.electe.net/fr/calculateur-de-cout-de-renovation",
+        "de": "https://tools.electe.net/de/rechner-fur-renovierungskosten",
+        "es": "https://tools.electe.net/es/calculadora-de-coste-de-reforma",
+        "pt": "https://tools.electe.net/pt/calculadora-de-custos-de-renovacao",
+        "zh": "https://tools.electe.net/zh/%E8%A3%85%E4%BF%AE%E6%88%90%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E8%A3%9D%E4%BF%AE%E6%88%90%E6%9C%AC%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/tadilat-maliyeti-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D9%83%D9%84%D9%81%D8%A9-%D8%A7%D9%84%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B2%D0%B0%D1%80%D1%82%D0%BE%D1%81%D1%82%D1%96-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-chi-phi-cai-tao",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/kalkulator-kosztu-remontu",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A2%D7%9C%D7%95%D7%AA-%D7%A9%D7%99%D7%A4%D7%95%D7%A5",
+        "id": "https://tools.electe.net/id/kalkulator-biaya-renovasi",
+        "nl": "https://tools.electe.net/nl/calculator-verbouwkosten",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-renoveringskostnad",
+        "ro": "https://tools.electe.net/ro/calculator-de-cost-al-renovarii",
+        "ko": "https://tools.electe.net/ko/%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81-%EB%B9%84%EC%9A%A9-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E6%94%B9%E8%A3%85%E8%B2%BB%E7%94%A8%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "shipping-cost",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "Shipping cost calculator",
+        "it": "Calcolatore costo di spedizione"
+      },
+      "summary": {
+        "en": "Volumetric weight, chargeable weight and what the carrier will bill.",
+        "it": "Peso volumetrico, peso tassabile e quanto fatturerà il corriere."
+      },
+      "formula": {
+        "en": "Volumetric weight = (L × W × H in cm) ÷ divisor    ·    Chargeable = the greater of volumetric and actual",
+        "it": "Peso volumetrico = (L × P × H in cm) ÷ divisore    ·    Tassabile = il maggiore tra volumetrico ed effettivo"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "lengthCm",
+          "kind": "number",
+          "optional": false,
+          "label": "Length (cm)"
+        },
+        {
+          "key": "widthCm",
+          "kind": "number",
+          "optional": false,
+          "label": "Width (cm)"
+        },
+        {
+          "key": "heightCm",
+          "kind": "number",
+          "optional": false,
+          "label": "Height (cm)"
+        },
+        {
+          "key": "actualWeightKg",
+          "kind": "number",
+          "optional": false,
+          "label": "Actual weight (kg)"
+        },
+        {
+          "key": "ratePerKg",
+          "kind": "number",
+          "optional": false,
+          "label": "Rate per kg"
+        },
+        {
+          "key": "divisor",
+          "kind": "integer",
+          "optional": true,
+          "label": "Carrier divisor"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "shippingCost",
+          "format": "currency",
+          "primary": true,
+          "label": "Estimated cost"
+        },
+        {
+          "key": "chargeableWeight",
+          "format": "number",
+          "primary": false,
+          "label": "Chargeable weight (kg)"
+        },
+        {
+          "key": "volumetricWeight",
+          "format": "number",
+          "primary": false,
+          "label": "Volumetric weight (kg)"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/shipping-cost-calculator",
+        "it": "https://tools.electe.net/it/calcola-costo-spedizione",
+        "fr": "https://tools.electe.net/fr/calculateur-de-frais-d-expedition",
+        "de": "https://tools.electe.net/de/versandkostenrechner",
+        "es": "https://tools.electe.net/es/calculadora-de-coste-de-envio",
+        "pt": "https://tools.electe.net/pt/calculadora-de-custos-de-envio",
+        "zh": "https://tools.electe.net/zh/%E8%BF%90%E8%B4%B9%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E9%81%8B%E8%B2%BB%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/kargo-maliyeti-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D9%83%D9%84%D9%81%D8%A9-%D8%A7%D9%84%D8%B4%D8%AD%D9%86",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B2%D0%B0%D1%80%D1%82%D0%BE%D1%81%D1%82%D1%96-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-chi-phi-van-chuyen",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B9%88%E0%B8%87",
+        "pl": "https://tools.electe.net/pl/kalkulator-kosztu-wysylki",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A2%D7%9C%D7%95%D7%AA-%D7%9E%D7%A9%D7%9C%D7%95%D7%97",
+        "id": "https://tools.electe.net/id/kalkulator-biaya-pengiriman",
+        "nl": "https://tools.electe.net/nl/calculator-verzendkosten",
+        "sv": "https://tools.electe.net/sv/fraktkostnadskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-cost-de-transport",
+        "ko": "https://tools.electe.net/ko/%EB%B0%B0%EC%86%A1%EB%B9%84-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E9%85%8D%E9%80%81%E6%96%99%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "cost-benefit",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "Cost-benefit analysis calculator",
+        "it": "Analisi costi-benefici"
+      },
+      "summary": {
+        "en": "Benefit-cost ratio and net benefit, both discounted.",
+        "it": "Rapporto benefici-costi e beneficio netto, entrambi attualizzati."
+      },
+      "formula": {
+        "en": "BCR = present value of benefits ÷ present value of costs    ·    1.0 is the decision boundary",
+        "it": "BCR = valore attuale dei benefici ÷ valore attuale dei costi    ·    1,0 è la soglia di decisione"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "upfrontCost",
+          "kind": "number",
+          "optional": false,
+          "label": "Upfront cost"
+        },
+        {
+          "key": "annualCost",
+          "kind": "number",
+          "optional": false,
+          "label": "Annual running cost"
+        },
+        {
+          "key": "annualBenefit",
+          "kind": "number",
+          "optional": false,
+          "label": "Annual benefit"
+        },
+        {
+          "key": "years",
+          "kind": "integer",
+          "optional": false,
+          "label": "Years"
+        },
+        {
+          "key": "rate",
+          "kind": "percent",
+          "optional": true,
+          "label": "Discount rate (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "bcr",
+          "format": "number",
+          "primary": true,
+          "label": "Benefit-cost ratio"
+        },
+        {
+          "key": "netBenefit",
+          "format": "currency",
+          "primary": false,
+          "label": "Net benefit"
+        },
+        {
+          "key": "pvBenefits",
+          "format": "currency",
+          "primary": false,
+          "label": "Present value of benefits"
+        },
+        {
+          "key": "pvCosts",
+          "format": "currency",
+          "primary": false,
+          "label": "Present value of costs"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/cost-benefit-analysis-calculator",
+        "it": "https://tools.electe.net/it/analisi-costi-benefici",
+        "fr": "https://tools.electe.net/fr/calculateur-d-analyse-couts-avantages",
+        "de": "https://tools.electe.net/de/rechner-fur-die-kosten-nutzen-analyse",
+        "es": "https://tools.electe.net/es/calculadora-de-analisis-coste-beneficio",
+        "pt": "https://tools.electe.net/pt/calculadora-de-analise-custo-beneficio",
+        "zh": "https://tools.electe.net/zh/%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/fayda-maliyet-analizi-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D9%83%D9%84%D9%81%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D9%86%D9%81%D8%B9%D8%A9",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%D1%83-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D1%82-%D1%96-%D0%B2%D0%B8%D0%B3%D1%96%D0%B4",
+        "vi": "https://tools.electe.net/vi/cong-cu-phan-tich-chi-phi-loi-ich",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B8%E0%B8%99-%E0%B8%9C%E0%B8%A5%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%A2%E0%B8%8A%E0%B8%99%E0%B9%8C",
+        "pl": "https://tools.electe.net/pl/kalkulator-analizy-kosztow-i-korzysci",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A0%D7%99%D7%AA%D7%95%D7%97-%D7%A2%D7%9C%D7%95%D7%AA-%D7%AA%D7%95%D7%A2%D7%9C%D7%AA",
+        "id": "https://tools.electe.net/id/kalkulator-analisis-biaya-manfaat",
+        "nl": "https://tools.electe.net/nl/calculator-kosten-batenanalyse",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-kostnads-nyttoanalys",
+        "ro": "https://tools.electe.net/ro/calculator-de-analiza-cost-beneficiu",
+        "ko": "https://tools.electe.net/ko/%EB%B9%84%EC%9A%A9%ED%8E%B8%EC%9D%B5-%EB%B6%84%EC%84%9D-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E8%B2%BB%E7%94%A8%E4%BE%BF%E7%9B%8A%E5%88%86%E6%9E%90%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "profitability",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Profitability calculator",
+        "it": "Analisi di redditività"
+      },
+      "summary": {
+        "en": "Gross margin, operating profit and return on assets from four lines of accounts.",
+        "it": "Margine lordo, utile operativo e ROA da quattro righe di bilancio."
+      },
+      "formula": {
+        "en": "Operating profit = revenue − COGS − operating expenses    ·    ROA = operating profit ÷ total assets",
+        "it": "Utile operativo = ricavi − costo del venduto − spese operative    ·    ROA = utile operativo ÷ attività totali"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": false,
+          "label": "Revenue"
+        },
+        {
+          "key": "cogs",
+          "kind": "number",
+          "optional": false,
+          "label": "Cost of goods sold"
+        },
+        {
+          "key": "operatingExpenses",
+          "kind": "number",
+          "optional": false,
+          "label": "Operating expenses"
+        },
+        {
+          "key": "totalAssets",
+          "kind": "number",
+          "optional": true,
+          "label": "Total assets"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "netMarginPct",
+          "format": "percent",
+          "primary": true,
+          "label": "Net margin"
+        },
+        {
+          "key": "grossMarginPct",
+          "format": "percent",
+          "primary": false,
+          "label": "Gross margin"
+        },
+        {
+          "key": "operatingProfit",
+          "format": "currency",
+          "primary": false,
+          "label": "Operating profit"
+        },
+        {
+          "key": "roa",
+          "format": "percent",
+          "primary": false,
+          "label": "Return on assets"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/profitability-calculator",
+        "it": "https://tools.electe.net/it/analisi-redditivita",
+        "fr": "https://tools.electe.net/fr/calculateur-de-rentabilite",
+        "de": "https://tools.electe.net/de/rentabilitatsrechner",
+        "es": "https://tools.electe.net/es/calculadora-de-rentabilidad",
+        "pt": "https://tools.electe.net/pt/calculadora-de-rentabilidade",
+        "zh": "https://tools.electe.net/zh/%E7%9B%88%E5%88%A9%E8%83%BD%E5%8A%9B%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E7%8D%B2%E5%88%A9%E8%83%BD%E5%8A%9B%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/karlilik-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%B1%D8%A8%D8%AD%D9%8A%D8%A9",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D1%80%D0%B5%D0%BD%D1%82%D0%B0%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-kha-nang-sinh-loi",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%81%E0%B8%B3%E0%B9%84%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/kalkulator-rentownosci",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/kalkulator-profitabilitas",
+        "nl": "https://tools.electe.net/nl/winstgevendheidscalculator",
+        "sv": "https://tools.electe.net/sv/lonsamhetskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-profitabilitate",
+        "ko": "https://tools.electe.net/ko/%EC%88%98%EC%9D%B5%EC%84%B1-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%8F%8E%E7%9B%8A%E6%80%A7%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "kpi-attainment",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "KPI attainment calculator",
+        "it": "Calcolatore raggiungimento KPI"
+      },
+      "summary": {
+        "en": "How far along a target you are, and what closes the gap.",
+        "it": "A che punto sei rispetto a un obiettivo e quanto manca."
+      },
+      "formula": {
+        "en": "Attainment = actual ÷ target    ·    Progress from baseline = (actual − baseline) ÷ (target − baseline)",
+        "it": "Raggiungimento = valore attuale ÷ obiettivo    ·    Progresso = (attuale − partenza) ÷ (obiettivo − partenza)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "actual",
+          "kind": "number",
+          "optional": false,
+          "label": "Current value"
+        },
+        {
+          "key": "target",
+          "kind": "number",
+          "optional": false,
+          "label": "Target"
+        },
+        {
+          "key": "baseline",
+          "kind": "number",
+          "optional": true,
+          "label": "Starting baseline"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "attainment",
+          "format": "percent",
+          "primary": true,
+          "label": "Attainment"
+        },
+        {
+          "key": "gap",
+          "format": "number",
+          "primary": false,
+          "label": "Remaining gap"
+        },
+        {
+          "key": "progressFromBaseline",
+          "format": "percent",
+          "primary": false,
+          "label": "Progress from baseline"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/kpi-attainment-calculator",
+        "it": "https://tools.electe.net/it/gestione-kpi",
+        "fr": "https://tools.electe.net/fr/calculateur-d-atteinte-des-kpi",
+        "de": "https://tools.electe.net/de/rechner-fur-die-kpi-zielerreichung",
+        "es": "https://tools.electe.net/es/calculadora-de-cumplimiento-de-kpi",
+        "pt": "https://tools.electe.net/pt/calculadora-de-cumprimento-de-kpi",
+        "zh": "https://tools.electe.net/zh/kpi-%E8%BE%BE%E6%88%90%E7%8E%87%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/kpi-%E9%81%94%E6%88%90%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/kpi-gerceklesme-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D8%AD%D9%82%D9%8A%D9%82-%D9%85%D8%A4%D8%B4%D8%B1-%D8%A7%D9%84%D8%A3%D8%AF%D8%A7%D8%A1",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B4%D0%BE%D1%81%D1%8F%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F-kpi",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-muc-dat-kpi",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%A3%E0%B8%A3%E0%B8%A5%E0%B8%B8-kpi",
+        "pl": "https://tools.electe.net/pl/kalkulator-realizacji-kpi",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A2%D7%9E%D7%99%D7%93%D7%94-%D7%91%D7%99%D7%A2%D7%93%D7%99-kpi",
+        "id": "https://tools.electe.net/id/kalkulator-pencapaian-kpi",
+        "nl": "https://tools.electe.net/nl/calculator-kpi-realisatie",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-kpi-maluppfyllelse",
+        "ro": "https://tools.electe.net/ro/calculator-de-atingere-a-kpi",
+        "ko": "https://tools.electe.net/ko/kpi-%EB%8B%AC%EC%84%B1%EB%A5%A0-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/kpi%E9%81%94%E6%88%90%E7%8E%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "domestic-worker-holiday",
+      "category": "operations",
+      "kind": "calculator",
+      "name": {
+        "en": "Domestic worker holiday calculator",
+        "it": "Calcolatore ferie per colf a ore"
+      },
+      "summary": {
+        "en": "Holiday entitlement for hourly colf and badanti under the Italian CCNL.",
+        "it": "Ferie maturate da colf e badanti a ore secondo il CCNL domestico."
+      },
+      "formula": {
+        "en": "Days = 26 × (months worked ÷ 12) × (weekly hours ÷ full-time hours)",
+        "it": "Giorni = 26 × (mesi lavorati ÷ 12) × (ore settimanali ÷ ore a tempo pieno)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "hoursPerWeek",
+          "kind": "number",
+          "optional": false,
+          "label": "Hours worked per week"
+        },
+        {
+          "key": "monthsWorked",
+          "kind": "number",
+          "optional": false,
+          "label": "Months worked this year"
+        },
+        {
+          "key": "fullTimeHours",
+          "kind": "number",
+          "optional": true,
+          "label": "Full-time hours per week"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "holidayDays",
+          "format": "number",
+          "primary": true,
+          "label": "Holiday days accrued"
+        },
+        {
+          "key": "holidayHours",
+          "format": "number",
+          "primary": false,
+          "label": "Approximate hours"
+        },
+        {
+          "key": "accrualPerMonth",
+          "format": "number",
+          "primary": false,
+          "label": "Accrual per month"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/domestic-worker-holiday-calculator",
+        "it": "https://tools.electe.net/it/ferie-per-colf-a-ore",
+        "fr": "https://tools.electe.net/fr/calculateur-de-conges-pour-employes-de-maison",
+        "de": "https://tools.electe.net/de/urlaubsrechner-fur-hausangestellte",
+        "es": "https://tools.electe.net/es/calculadora-de-vacaciones-del-empleado-del-hogar",
+        "pt": "https://tools.electe.net/pt/calculadora-de-ferias-do-trabalho-domestico",
+        "zh": "https://tools.electe.net/zh/%E5%AE%B6%E6%94%BF%E4%BA%BA%E5%91%98%E5%81%87%E6%9C%9F%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%AE%B6%E4%BA%8B%E5%8B%9E%E5%B7%A5%E7%89%B9%E4%BC%91%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/ev-iscisi-izin-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D9%84%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A%D9%8A%D9%86",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B2%D1%96%D0%B4%D0%BF%D1%83%D1%81%D1%82%D0%BA%D0%B8-%D0%B4%D0%BB%D1%8F-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%96%D1%85-%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-ngay-nghi-phep-cho-lao-dong-giup-viec-gia-dinh",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/kalkulator-urlopu-pracownika-domowego",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%97%D7%95%D7%A4%D7%A9%D7%94-%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99-%D7%9E%D7%A9%D7%A7-%D7%91%D7%99%D7%AA",
+        "id": "https://tools.electe.net/id/kalkulator-cuti-pekerja-rumah-tangga",
+        "nl": "https://tools.electe.net/nl/vakantiecalculator-huishoudelijk-personeel",
+        "sv": "https://tools.electe.net/sv/semesterkalkylator-for-hushallsanstallda",
+        "ro": "https://tools.electe.net/ro/calculator-de-concediu-pentru-lucratorii-casnici",
+        "ko": "https://tools.electe.net/ko/%EA%B0%80%EC%82%AC%EA%B7%BC%EB%A1%9C%EC%9E%90-%ED%9C%B4%EA%B0%80-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%AE%B6%E4%BA%8B%E4%BD%BF%E7%94%A8%E4%BA%BA%E3%81%AE%E4%BC%91%E6%9A%87%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "variance",
+      "category": "data",
+      "kind": "calculator",
+      "name": {
+        "en": "Variance calculator",
+        "it": "Calcolatore di varianza"
+      },
+      "summary": {
+        "en": "Sample and population variance, mean and standard deviation from a list.",
+        "it": "Varianza campionaria e di popolazione, media e deviazione standard da un elenco."
+      },
+      "formula": {
+        "en": "Population variance = Σ(x − mean)² ÷ n    ·    Sample variance = Σ(x − mean)² ÷ (n − 1)",
+        "it": "Varianza di popolazione = Σ(x − media)² ÷ n    ·    Varianza campionaria = Σ(x − media)² ÷ (n − 1)"
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "key": "sampleVariance",
+          "format": "number",
+          "primary": true,
+          "label": "Sample variance"
+        },
+        {
+          "key": "populationVariance",
+          "format": "number",
+          "primary": false,
+          "label": "Population variance"
+        },
+        {
+          "key": "mean",
+          "format": "number",
+          "primary": false,
+          "label": "Mean"
+        },
+        {
+          "key": "sampleStdDev",
+          "format": "number",
+          "primary": false,
+          "label": "Sample standard deviation"
+        },
+        {
+          "key": "count",
+          "format": "integer",
+          "primary": false,
+          "label": "Values"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/variance-calculator-online",
+        "it": "https://tools.electe.net/it/calcolo-varianza",
+        "fr": "https://tools.electe.net/fr/calculateur-de-variance",
+        "de": "https://tools.electe.net/de/varianzrechner",
+        "es": "https://tools.electe.net/es/calculadora-de-varianza",
+        "pt": "https://tools.electe.net/pt/calculadora-de-variancia",
+        "zh": "https://tools.electe.net/zh/%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E8%AE%8A%E7%95%B0%E6%95%B8%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/varyans-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%A8%D8%A7%D9%8A%D9%86",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B4%D0%B8%D1%81%D0%BF%D0%B5%D1%80%D1%81%D1%96%D1%97",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-phuong-sai",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%9B%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%A7%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/kalkulator-wariancji",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%A9%D7%95%D7%A0%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/kalkulator-varians",
+        "nl": "https://tools.electe.net/nl/variantiecalculator",
+        "sv": "https://tools.electe.net/sv/varianskalkylator",
+        "ro": "https://tools.electe.net/ro/calculator-de-varianta",
+        "ko": "https://tools.electe.net/ko/%EB%B6%84%EC%82%B0-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%88%86%E6%95%A3%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "balance-sheet-reclassification",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Reclassified balance sheet",
+        "it": "Stato patrimoniale riclassificato"
+      },
+      "summary": {
+        "en": "The four margins a CEE balance sheet does not show you.",
+        "it": "I quattro margini che lo schema CEE non ti mostra."
+      },
+      "formula": {
+        "en": "Working capital = current assets − short-term debt    ·    Treasury margin = (receivables + cash) − short-term debt    ·    Structural margin = equity − fixed assets",
+        "it": "Capitale circolante netto = attivo corrente − passivo corrente    ·    Margine di tesoreria = (crediti + liquidità) − passivo corrente    ·    Margine di struttura = patrimonio netto − immobilizzazioni"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "fixedAssets",
+          "kind": "number",
+          "optional": false,
+          "label": "Fixed assets"
+        },
+        {
+          "key": "inventory",
+          "kind": "number",
+          "optional": false,
+          "label": "Inventory"
+        },
+        {
+          "key": "receivables",
+          "kind": "number",
+          "optional": false,
+          "label": "Receivables"
+        },
+        {
+          "key": "cash",
+          "kind": "number",
+          "optional": false,
+          "label": "Cash and equivalents"
+        },
+        {
+          "key": "equity",
+          "kind": "number",
+          "optional": false,
+          "label": "Equity"
+        },
+        {
+          "key": "shortTermDebt",
+          "kind": "number",
+          "optional": false,
+          "label": "Short-term liabilities"
+        },
+        {
+          "key": "longTermDebt",
+          "kind": "number",
+          "optional": false,
+          "label": "Long-term liabilities"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "workingCapital",
+          "format": "currency",
+          "primary": true,
+          "label": "Working capital"
+        },
+        {
+          "key": "treasuryMargin",
+          "format": "currency",
+          "primary": false,
+          "label": "Treasury margin"
+        },
+        {
+          "key": "structuralMargin",
+          "format": "currency",
+          "primary": false,
+          "label": "Structural margin"
+        },
+        {
+          "key": "currentRatio",
+          "format": "number",
+          "primary": false,
+          "label": "Current ratio"
+        },
+        {
+          "key": "currentAssets",
+          "format": "currency",
+          "primary": false,
+          "label": "Current assets"
+        },
+        {
+          "key": "debtToEquity",
+          "format": "number",
+          "primary": false,
+          "label": "Debt to equity"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/reclassified-balance-sheet",
+        "it": "https://tools.electe.net/it/stato-patrimoniale-riclassificato-schema",
+        "fr": "https://tools.electe.net/fr/bilan-reclasse",
+        "de": "https://tools.electe.net/de/umgegliederte-bilanz",
+        "es": "https://tools.electe.net/es/balance-reclasificado",
+        "pt": "https://tools.electe.net/pt/balanco-reclassificado",
+        "zh": "https://tools.electe.net/zh/%E9%87%8D%E5%88%86%E7%B1%BB%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8",
+        "tc": "https://tools.electe.net/tc/%E9%87%8D%E5%88%86%E9%A1%9E%E8%B3%87%E7%94%A2%E8%B2%A0%E5%82%B5%E8%A1%A8",
+        "tr": "https://tools.electe.net/tr/yeniden-siniflandirilmis-bilanco",
+        "ar": "https://tools.electe.net/ar/%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%8F%D8%B9%D8%A7%D8%AF-%D8%AA%D8%B5%D9%86%D9%8A%D9%81%D9%87%D8%A7",
+        "uk": "https://tools.electe.net/uk/%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D1%81%D0%B8%D1%84%D1%96%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%B1%D0%B0%D0%BB%D0%B0%D0%BD%D1%81",
+        "vi": "https://tools.electe.net/vi/bang-can-doi-ke-toan-tai-phan-loai",
+        "th": "https://tools.electe.net/th/%E0%B8%87%E0%B8%9A%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A0%E0%B8%97%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88",
+        "pl": "https://tools.electe.net/pl/bilans-przeksztalcony",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%90%D7%96%D7%9F-%D7%9E%D7%A1%D7%95%D7%95%D7%92-%D7%9E%D7%97%D7%93%D7%A9",
+        "id": "https://tools.electe.net/id/neraca-terklasifikasi-ulang",
+        "nl": "https://tools.electe.net/nl/geherclassificeerde-balans",
+        "sv": "https://tools.electe.net/sv/omklassificerad-balansrakning",
+        "ro": "https://tools.electe.net/ro/bilant-reclasificat",
+        "ko": "https://tools.electe.net/ko/%EC%9E%AC%EB%B6%84%EB%A5%98-%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C",
+        "ja": "https://tools.electe.net/ja/%E7%B5%84%E6%9B%BF%E8%B2%B8%E5%80%9F%E5%AF%BE%E7%85%A7%E8%A1%A8"
+      }
+    },
+    {
+      "id": "business-lease",
+      "category": "finance",
+      "kind": "calculator",
+      "name": {
+        "en": "Business lease calculator",
+        "it": "Calcolatore affitto d'azienda"
+      },
+      "summary": {
+        "en": "An indicative annual rent for leasing a going concern, checked against its earnings.",
+        "it": "Un canone annuo indicativo per l'affitto d'azienda, verificato sui suoi utili."
+      },
+      "formula": {
+        "en": "Annual rent = value of assets leased × expected yield    ·    Sanity check = rent ÷ EBITDA",
+        "it": "Canone annuo = valore dei beni concessi × rendimento atteso    ·    Verifica = canone ÷ EBITDA"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "assetValue",
+          "kind": "number",
+          "optional": false,
+          "label": "Value of assets leased"
+        },
+        {
+          "key": "revenue",
+          "kind": "number",
+          "optional": false,
+          "label": "Annual revenue"
+        },
+        {
+          "key": "operatingCosts",
+          "kind": "number",
+          "optional": false,
+          "label": "Annual operating costs"
+        },
+        {
+          "key": "yieldPct",
+          "kind": "percent",
+          "optional": false,
+          "label": "Expected yield (%)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "annualRent",
+          "format": "currency",
+          "primary": true,
+          "label": "Indicative annual rent"
+        },
+        {
+          "key": "monthlyRent",
+          "format": "currency",
+          "primary": false,
+          "label": "Monthly rent"
+        },
+        {
+          "key": "ebitda",
+          "format": "currency",
+          "primary": false,
+          "label": "EBITDA"
+        },
+        {
+          "key": "rentToEbitda",
+          "format": "percent",
+          "primary": false,
+          "label": "Rent as share of EBITDA"
+        },
+        {
+          "key": "residualToTenant",
+          "format": "currency",
+          "primary": false,
+          "label": "Left to the tenant"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/business-lease-calculator",
+        "it": "https://tools.electe.net/it/affitto-di-azienda",
+        "fr": "https://tools.electe.net/fr/calculateur-de-location-gerance",
+        "de": "https://tools.electe.net/de/rechner-fur-die-unternehmenspacht",
+        "es": "https://tools.electe.net/es/calculadora-de-alquiler-de-empresa",
+        "pt": "https://tools.electe.net/pt/calculadora-de-arrendamento-de-empresa",
+        "zh": "https://tools.electe.net/zh/%E4%BC%81%E4%B8%9A%E7%A7%9F%E8%B5%81%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E4%BA%8B%E6%A5%AD%E7%A7%9F%E8%B3%83%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/isletme-kiralama-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A5%D9%8A%D8%AC%D8%A7%D8%B1-%D8%A7%D9%84%D9%86%D8%B4%D8%A7%D8%B7-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BE%D1%80%D0%B5%D0%BD%D0%B4%D0%B8-%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tinh-cho-thue-doanh-nghiep",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/kalkulator-dzierzawy-przedsiebiorstwa",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%94%D7%A9%D7%9B%D7%A8%D7%AA-%D7%A2%D7%A1%D7%A7",
+        "id": "https://tools.electe.net/id/kalkulator-sewa-usaha",
+        "nl": "https://tools.electe.net/nl/calculator-huur-van-een-onderneming",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-foretagsarrende",
+        "ro": "https://tools.electe.net/ro/calculator-de-inchiriere-a-unei-afaceri",
+        "ko": "https://tools.electe.net/ko/%EC%82%AC%EC%97%85%EC%B2%B4-%EC%9E%84%EB%8C%80-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E4%BA%8B%E6%A5%AD%E8%B3%83%E8%B2%B8%E5%80%9F%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "sales-forecast",
+      "category": "sales",
+      "kind": "calculator",
+      "name": {
+        "en": "Sales forecast calculator",
+        "it": "Calcolatore previsione vendite"
+      },
+      "summary": {
+        "en": "Project the next periods from your sales history — the maths, not a black box.",
+        "it": "Proietta i prossimi periodi dallo storico — la matematica, non una scatola nera."
+      },
+      "formula": {
+        "en": "level = α·actual + (1−α)·(level + trend)    ·    trend = β·(level change) + (1−β)·trend    ·    forecast(h) = level + h·trend",
+        "it": "livello = α·valore + (1−α)·(livello + trend)    ·    trend = β·(variazione del livello) + (1−β)·trend    ·    previsione(h) = livello + h·trend"
+      },
+      "series": true,
+      "inputs": [
+        {
+          "key": "periodsAhead",
+          "kind": "integer",
+          "optional": false,
+          "label": "Periods to forecast"
+        },
+        {
+          "key": "alpha",
+          "kind": "number",
+          "optional": true,
+          "label": "Level smoothing (α, 0-1)"
+        },
+        {
+          "key": "beta",
+          "kind": "number",
+          "optional": true,
+          "label": "Trend smoothing (β, 0-1)"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "next",
+          "format": "number",
+          "primary": true,
+          "label": "Next period"
+        },
+        {
+          "key": "total",
+          "format": "number",
+          "primary": false,
+          "label": "Total over the horizon"
+        },
+        {
+          "key": "trend",
+          "format": "number",
+          "primary": false,
+          "label": "Trend per period"
+        },
+        {
+          "key": "level",
+          "format": "number",
+          "primary": false,
+          "label": "Current level"
+        },
+        {
+          "key": "periods",
+          "format": "integer",
+          "primary": false,
+          "label": "History points"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/sales-forecast-calculator",
+        "it": "https://tools.electe.net/it/previsione-vendite",
+        "fr": "https://tools.electe.net/fr/calculateur-de-prevision-des-ventes",
+        "de": "https://tools.electe.net/de/absatzprognose-rechner",
+        "es": "https://tools.electe.net/es/calculadora-de-prevision-de-ventas",
+        "pt": "https://tools.electe.net/pt/calculadora-de-previsao-de-vendas",
+        "zh": "https://tools.electe.net/zh/%E9%94%80%E5%94%AE%E9%A2%84%E6%B5%8B%E8%AE%A1%E7%AE%97%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E9%8A%B7%E5%94%AE%E9%A0%90%E6%B8%AC%E8%A8%88%E7%AE%97%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/satis-tahmini-hesaplayici",
+        "ar": "https://tools.electe.net/ar/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%AA%D9%88%D9%82%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%83-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-du-bao-doanh-so",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%82%E0%B8%B2%E0%B8%A2",
+        "pl": "https://tools.electe.net/pl/kalkulator-prognozy-sprzedazy",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%AA%D7%97%D7%96%D7%99%D7%AA-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/kalkulator-prakiraan-penjualan",
+        "nl": "https://tools.electe.net/nl/verkoopprognosecalculator",
+        "sv": "https://tools.electe.net/sv/kalkylator-for-forsaljningsprognos",
+        "ro": "https://tools.electe.net/ro/calculator-de-prognoza-a-vanzarilor",
+        "ko": "https://tools.electe.net/ko/%EB%A7%A4%EC%B6%9C-%EC%98%88%EC%B8%A1-%EA%B3%84%EC%82%B0%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E5%A3%B2%E4%B8%8A%E4%BA%88%E6%B8%AC%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "istogramma",
+      "category": "data",
+      "kind": "data",
+      "name": {
+        "en": "Histogram generator",
+        "it": "Generatore di istogrammi"
+      },
+      "summary": {
+        "en": "See the shape of a set of numbers, not just its average.",
+        "it": "Guarda la forma di una serie di numeri, non solo la sua media."
+      },
+      "formula": {
+        "en": "Bin width = (max − min) ÷ number of bins    ·    default bins = ⌈log₂ n⌉ + 1 (Sturges)",
+        "it": "Ampiezza intervallo = (max − min) ÷ numero di intervalli    ·    intervalli predefiniti = ⌈log₂ n⌉ + 1 (Sturges)"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "bins",
+          "kind": "integer",
+          "optional": true,
+          "label": "Number of bins"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "count",
+          "format": "integer",
+          "primary": true,
+          "label": "Values in bin"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/histogram-generator",
+        "it": "https://tools.electe.net/it/istogramma-con-excel",
+        "fr": "https://tools.electe.net/fr/generateur-d-histogrammes",
+        "de": "https://tools.electe.net/de/histogramm-generator",
+        "es": "https://tools.electe.net/es/generador-de-histogramas",
+        "pt": "https://tools.electe.net/pt/gerador-de-histogramas",
+        "zh": "https://tools.electe.net/zh/%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%94%9F%E6%88%90%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E7%9B%B4%E6%96%B9%E5%9C%96%E7%94%A2%E7%94%9F%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/histogram-olusturucu",
+        "ar": "https://tools.electe.net/ar/%D9%85%D9%88%D9%84%D9%91%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D9%91%D8%AC-%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D8%A7%D8%B1%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%B3%D1%96%D1%81%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D0%BC",
+        "vi": "https://tools.electe.net/vi/cong-cu-tao-bieu-do-tan-suat",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AE%E0%B8%B4%E0%B8%AA%E0%B9%82%E0%B8%97%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1",
+        "pl": "https://tools.electe.net/pl/generator-histogramu",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%95%D7%9C%D7%9C-%D7%94%D7%99%D7%A1%D7%98%D7%95%D7%92%D7%A8%D7%9E%D7%94",
+        "id": "https://tools.electe.net/id/pembuat-histogram",
+        "nl": "https://tools.electe.net/nl/histogramgenerator",
+        "sv": "https://tools.electe.net/sv/histogramverktyg",
+        "ro": "https://tools.electe.net/ro/generator-de-histograme",
+        "ko": "https://tools.electe.net/ko/%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8-%EC%83%9D%EC%84%B1%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "unire-csv",
+      "category": "data",
+      "kind": "data",
+      "name": {
+        "en": "Merge CSV files",
+        "it": "Unire file CSV"
+      },
+      "summary": {
+        "en": "Combine several CSVs into one, matching columns by name.",
+        "it": "Unisci più CSV in uno solo, abbinando le colonne per nome."
+      },
+      "formula": {
+        "en": "Columns = the union of every file's headers, in first-seen order · rows keep their own file's values, matched by header name",
+        "it": "Colonne = unione delle intestazioni di tutti i file, nell'ordine in cui compaiono · le righe conservano i valori del proprio file, abbinati per nome"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "files",
+          "kind": "integer",
+          "optional": true,
+          "label": "CSV files"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "rows",
+          "format": "integer",
+          "primary": true,
+          "label": "Rows merged"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/merge-csv-files",
+        "it": "https://tools.electe.net/it/unire-file-csv",
+        "fr": "https://tools.electe.net/fr/fusionner-des-fichiers-csv",
+        "de": "https://tools.electe.net/de/csv-dateien-zusammenfuhren",
+        "es": "https://tools.electe.net/es/unir-archivos-csv",
+        "pt": "https://tools.electe.net/pt/juntar-ficheiros-csv",
+        "zh": "https://tools.electe.net/zh/%E5%90%88%E5%B9%B6-csv-%E6%96%87%E4%BB%B6",
+        "tc": "https://tools.electe.net/tc/%E5%90%88%E4%BD%B5-csv-%E6%AA%94%E6%A1%88",
+        "tr": "https://tools.electe.net/tr/csv-dosyalarini-birlestir",
+        "ar": "https://tools.electe.net/ar/%D8%AF%D9%85%D8%AC-%D9%85%D9%84%D9%81%D8%A7%D8%AA-csv",
+        "uk": "https://tools.electe.net/uk/%D0%BE%D0%B1-%D1%94%D0%B4%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F-csv-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/gop-tep-csv",
+        "th": "https://tools.electe.net/th/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%84%E0%B8%9F%E0%B8%A5%E0%B9%8C-csv",
+        "pl": "https://tools.electe.net/pl/scalanie-plikow-csv",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%A7%D7%95%D7%91%D7%A6%D7%99-csv",
+        "id": "https://tools.electe.net/id/gabungkan-file-csv",
+        "nl": "https://tools.electe.net/nl/csv-bestanden-samenvoegen",
+        "sv": "https://tools.electe.net/sv/sla-ihop-csv-filer",
+        "ro": "https://tools.electe.net/ro/unire-fisiere-csv",
+        "ko": "https://tools.electe.net/ko/csv-%ED%8C%8C%EC%9D%BC-%EB%B3%91%ED%95%A9",
+        "ja": "https://tools.electe.net/ja/csv%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%B5%90%E5%90%88"
+      }
+    },
+    {
+      "id": "data-viz",
+      "category": "data",
+      "kind": "data",
+      "name": {
+        "en": "Chart maker",
+        "it": "Generatore di grafici"
+      },
+      "summary": {
+        "en": "Paste a table, get a chart you can read.",
+        "it": "Incolla una tabella, ottieni un grafico leggibile."
+      },
+      "formula": {
+        "en": "One axis, always — every series is drawn on the same scale",
+        "it": "Un solo asse, sempre — tutte le serie sono disegnate sulla stessa scala"
+      },
+      "series": false,
+      "inputs": [
+        {
+          "key": "data",
+          "kind": "integer",
+          "optional": true,
+          "label": "Your data"
+        },
+        {
+          "key": "kind",
+          "kind": "integer",
+          "optional": true,
+          "label": "Chart type"
+        },
+        {
+          "key": "series",
+          "kind": "integer",
+          "optional": true,
+          "label": "Columns to plot"
+        }
+      ],
+      "outputs": [
+        {
+          "key": "rows",
+          "format": "integer",
+          "primary": true,
+          "label": "Rows"
+        }
+      ],
+      "url": {
+        "en": "https://tools.electe.net/chart-maker",
+        "it": "https://tools.electe.net/it/data-visualization-free",
+        "fr": "https://tools.electe.net/fr/createur-de-graphiques",
+        "de": "https://tools.electe.net/de/diagramm-generator",
+        "es": "https://tools.electe.net/es/creador-de-graficos",
+        "pt": "https://tools.electe.net/pt/criador-de-graficos",
+        "zh": "https://tools.electe.net/zh/%E5%9B%BE%E8%A1%A8%E5%88%B6%E4%BD%9C%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%9C%96%E8%A1%A8%E8%A3%BD%E4%BD%9C%E5%B7%A5%E5%85%B7",
+        "tr": "https://tools.electe.net/tr/grafik-olusturucu",
+        "ar": "https://tools.electe.net/ar/%D9%85%D9%8F%D9%86%D8%B4%D8%A6-%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D9%8A%D8%A9",
+        "uk": "https://tools.electe.net/uk/%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/cong-cu-tao-bieu-do",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4",
+        "pl": "https://tools.electe.net/pl/kreator-wykresow",
+        "he": "https://tools.electe.net/he/%D7%99%D7%95%D7%A6%D7%A8-%D7%AA%D7%A8%D7%A9%D7%99%D7%9E%D7%99%D7%9D",
+        "id": "https://tools.electe.net/id/pembuat-grafik",
+        "nl": "https://tools.electe.net/nl/grafiekmaker",
+        "sv": "https://tools.electe.net/sv/diagramverktyg",
+        "ro": "https://tools.electe.net/ro/generator-de-grafice",
+        "ko": "https://tools.electe.net/ko/%EC%B0%A8%ED%8A%B8-%EC%83%9D%EC%84%B1%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%82%B0%E3%83%A9%E3%83%95%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "financial-analysis",
+      "category": "finance",
+      "kind": "model",
+      "name": {
+        "en": "Financial analysis",
+        "it": "Analisi finanziaria"
+      },
+      "summary": {
+        "en": "Describe your financial situation in your own words and get a structured reading of it.",
+        "it": "Descrivi la tua situazione finanziaria a parole tue e ottieni una lettura strutturata."
+      },
+      "formula": {
+        "en": "No formula. A language model reads what you wrote and structures it.",
+        "it": "Nessuna formula. Un modello linguistico legge quello che hai scritto e lo struttura."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/financial-analysis",
+        "it": "https://tools.electe.net/it/calcolatore-finanziario",
+        "fr": "https://tools.electe.net/fr/analyse-financiere",
+        "de": "https://tools.electe.net/de/finanzanalyse",
+        "es": "https://tools.electe.net/es/analisis-financiero",
+        "pt": "https://tools.electe.net/pt/analise-financeira",
+        "zh": "https://tools.electe.net/zh/%E8%B4%A2%E5%8A%A1%E5%88%86%E6%9E%90",
+        "tc": "https://tools.electe.net/tc/%E8%B2%A1%E5%8B%99%E5%88%86%E6%9E%90",
+        "tr": "https://tools.electe.net/tr/finansal-analiz",
+        "ar": "https://tools.electe.net/ar/%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D1%84%D1%96%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D0%B8%D0%B9-%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7",
+        "vi": "https://tools.electe.net/vi/phan-tich-tai-chinh",
+        "th": "https://tools.electe.net/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/analiza-finansowa",
+        "he": "https://tools.electe.net/he/%D7%A0%D7%99%D7%AA%D7%95%D7%97-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99",
+        "id": "https://tools.electe.net/id/analisis-keuangan",
+        "nl": "https://tools.electe.net/nl/financiele-analyse",
+        "sv": "https://tools.electe.net/sv/finansiell-analys",
+        "ro": "https://tools.electe.net/ro/analiza-financiara",
+        "ko": "https://tools.electe.net/ko/%EC%9E%AC%EB%AC%B4-%EB%B6%84%EC%84%9D",
+        "ja": "https://tools.electe.net/ja/%E8%B2%A1%E5%8B%99%E5%88%86%E6%9E%90"
+      }
+    },
+    {
+      "id": "sales-analysis",
+      "category": "sales",
+      "kind": "model",
+      "name": {
+        "en": "Sales data analysis",
+        "it": "Analisi dati di vendita"
+      },
+      "summary": {
+        "en": "Upload a sales export and get a reading of what the columns actually support.",
+        "it": "Carica un export delle vendite e scopri cosa le colonne possono davvero dire."
+      },
+      "formula": {
+        "en": "Your file is parsed in the browser. Only per-column aggregates are sent.",
+        "it": "Il file viene letto nel browser. Vengono inviati solo gli aggregati per colonna."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/sales-data-analysis",
+        "it": "https://tools.electe.net/it/analisi-vendite",
+        "fr": "https://tools.electe.net/fr/analyse-des-donnees-de-ventes",
+        "de": "https://tools.electe.net/de/analyse-von-verkaufsdaten",
+        "es": "https://tools.electe.net/es/analisis-de-datos-de-ventas",
+        "pt": "https://tools.electe.net/pt/analise-de-dados-de-vendas",
+        "zh": "https://tools.electe.net/zh/%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90",
+        "tc": "https://tools.electe.net/tc/%E9%8A%B7%E5%94%AE%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90",
+        "tr": "https://tools.electe.net/tr/satis-verisi-analizi",
+        "ar": "https://tools.electe.net/ar/%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA",
+        "uk": "https://tools.electe.net/uk/%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/phan-tich-du-lieu-ban-hang",
+        "th": "https://tools.electe.net/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%B2%E0%B8%A2",
+        "pl": "https://tools.electe.net/pl/analiza-danych-sprzedazowych",
+        "he": "https://tools.electe.net/he/%D7%A0%D7%99%D7%AA%D7%95%D7%97-%D7%A0%D7%AA%D7%95%D7%A0%D7%99-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/analisis-data-penjualan",
+        "nl": "https://tools.electe.net/nl/analyse-van-verkoopdata",
+        "sv": "https://tools.electe.net/sv/analys-av-forsaljningsdata",
+        "ro": "https://tools.electe.net/ro/analiza-datelor-de-vanzari",
+        "ko": "https://tools.electe.net/ko/%ED%8C%90%EB%A7%A4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D",
+        "ja": "https://tools.electe.net/ja/%E5%A3%B2%E4%B8%8A%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90"
+      }
+    },
+    {
+      "id": "cost-analysis",
+      "category": "finance",
+      "kind": "model",
+      "name": {
+        "en": "Cost analysis",
+        "it": "Analisi dei costi"
+      },
+      "summary": {
+        "en": "Upload a cost or expense export and see where the money concentrates.",
+        "it": "Carica un export di costi o spese e vedi dove si concentra il denaro."
+      },
+      "formula": {
+        "en": "Your file is parsed in the browser. Only per-column aggregates are sent.",
+        "it": "Il file viene letto nel browser. Vengono inviati solo gli aggregati per colonna."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/cost-analysis",
+        "it": "https://tools.electe.net/it/analisi-costi",
+        "fr": "https://tools.electe.net/fr/analyse-des-couts",
+        "de": "https://tools.electe.net/de/kostenanalyse",
+        "es": "https://tools.electe.net/es/analisis-de-costes",
+        "pt": "https://tools.electe.net/pt/analise-de-custos",
+        "zh": "https://tools.electe.net/zh/%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90",
+        "tc": "https://tools.electe.net/tc/%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90",
+        "tr": "https://tools.electe.net/tr/maliyet-analizi",
+        "ar": "https://tools.electe.net/ar/%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81",
+        "uk": "https://tools.electe.net/uk/%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7-%D0%B2%D0%B8%D1%82%D1%80%D0%B0%D1%82",
+        "vi": "https://tools.electe.net/vi/phan-tich-chi-phi",
+        "th": "https://tools.electe.net/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B8%E0%B8%99",
+        "pl": "https://tools.electe.net/pl/analiza-kosztow",
+        "he": "https://tools.electe.net/he/%D7%A0%D7%99%D7%AA%D7%95%D7%97-%D7%A2%D7%9C%D7%95%D7%99%D7%95%D7%AA",
+        "id": "https://tools.electe.net/id/analisis-biaya",
+        "nl": "https://tools.electe.net/nl/kostenanalyse",
+        "sv": "https://tools.electe.net/sv/kostnadsanalys",
+        "ro": "https://tools.electe.net/ro/analiza-de-costuri",
+        "ko": "https://tools.electe.net/ko/%EB%B9%84%EC%9A%A9-%EB%B6%84%EC%84%9D",
+        "ja": "https://tools.electe.net/ja/%E3%82%B3%E3%82%B9%E3%83%88%E5%88%86%E6%9E%90"
+      }
+    },
+    {
+      "id": "risk-assessment",
+      "category": "operations",
+      "kind": "model",
+      "name": {
+        "en": "Business risk assessment",
+        "it": "Valutazione dei rischi"
+      },
+      "summary": {
+        "en": "Describe your situation and get the exposures named, ranked and paired with proportionate mitigations.",
+        "it": "Descrivi la tua situazione e ottieni i rischi nominati, ordinati e affiancati a contromisure proporzionate."
+      },
+      "formula": {
+        "en": "No formula, and deliberately no numeric score.",
+        "it": "Nessuna formula, e volutamente nessun punteggio numerico."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/business-risk-assessment",
+        "it": "https://tools.electe.net/it/valutazione-rischio",
+        "fr": "https://tools.electe.net/fr/evaluation-des-risques-de-l-entreprise",
+        "de": "https://tools.electe.net/de/bewertung-von-geschaftsrisiken",
+        "es": "https://tools.electe.net/es/evaluacion-de-riesgos-del-negocio",
+        "pt": "https://tools.electe.net/pt/avaliacao-de-riscos-do-negocio",
+        "zh": "https://tools.electe.net/zh/%E4%BC%81%E4%B8%9A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0",
+        "tc": "https://tools.electe.net/tc/%E4%BC%81%E6%A5%AD%E9%A2%A8%E9%9A%AA%E8%A9%95%E4%BC%B0",
+        "tr": "https://tools.electe.net/tr/isletme-risk-degerlendirmesi",
+        "ar": "https://tools.electe.net/ar/%D8%AA%D9%82%D9%8A%D9%8A%D9%85-%D9%85%D8%AE%D8%A7%D8%B7%D8%B1-%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84",
+        "uk": "https://tools.electe.net/uk/%D0%BE%D1%86%D1%96%D0%BD%D0%BA%D0%B0-%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81-%D1%80%D0%B8%D0%B7%D0%B8%D0%BA%D1%96%D0%B2",
+        "vi": "https://tools.electe.net/vi/danh-gia-rui-ro-doanh-nghiep",
+        "th": "https://tools.electe.net/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88",
+        "pl": "https://tools.electe.net/pl/ocena-ryzyka-biznesowego",
+        "he": "https://tools.electe.net/he/%D7%94%D7%A2%D7%A8%D7%9B%D7%AA-%D7%A1%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D",
+        "id": "https://tools.electe.net/id/penilaian-risiko-bisnis",
+        "nl": "https://tools.electe.net/nl/bedrijfsrisicoanalyse",
+        "sv": "https://tools.electe.net/sv/riskbedomning-for-foretag",
+        "ro": "https://tools.electe.net/ro/evaluare-a-riscurilor-de-afaceri",
+        "ko": "https://tools.electe.net/ko/%EC%82%AC%EC%97%85-%EB%A6%AC%EC%8A%A4%ED%81%AC-%EC%A7%84%EB%8B%A8",
+        "ja": "https://tools.electe.net/ja/%E4%BA%8B%E6%A5%AD%E3%83%AA%E3%82%B9%E3%82%AF%E8%A9%95%E4%BE%A1"
+      }
+    },
+    {
+      "id": "company-profile",
+      "category": "marketing",
+      "kind": "model",
+      "name": {
+        "en": "Company profile generator",
+        "it": "Generatore di profilo aziendale"
+      },
+      "summary": {
+        "en": "A company profile in three lengths, written only from the facts you supply.",
+        "it": "Un profilo aziendale in tre lunghezze, scritto solo con i fatti che gli dai tu."
+      },
+      "formula": {
+        "en": "No formula. A model writes from the facts you give it, and only those.",
+        "it": "Nessuna formula. Un modello scrive dai fatti che gli dai, e solo da quelli."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/company-profile-generator",
+        "it": "https://tools.electe.net/it/company-profile-esempio",
+        "fr": "https://tools.electe.net/fr/generateur-de-profil-d-entreprise",
+        "de": "https://tools.electe.net/de/generator-fur-unternehmensprofile",
+        "es": "https://tools.electe.net/es/generador-de-perfil-de-empresa",
+        "pt": "https://tools.electe.net/pt/gerador-de-perfil-de-empresa",
+        "zh": "https://tools.electe.net/zh/%E5%85%AC%E5%8F%B8%E7%AE%80%E4%BB%8B%E7%94%9F%E6%88%90%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E5%85%AC%E5%8F%B8%E7%B0%A1%E4%BB%8B%E7%94%A2%E7%94%9F%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/sirket-profili-olusturucu",
+        "ar": "https://tools.electe.net/ar/%D9%85%D9%88%D9%84%D9%91%D8%AF-%D8%A7%D9%84%D9%85%D9%84%D9%81-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81%D9%8A-%D9%84%D9%84%D8%B4%D8%B1%D9%83%D8%A9",
+        "uk": "https://tools.electe.net/uk/%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%8E-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%97",
+        "vi": "https://tools.electe.net/vi/cong-cu-tao-ho-so-cong-ty",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%84%E0%B8%9F%E0%B8%A5%E0%B9%8C%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97",
+        "pl": "https://tools.electe.net/pl/generator-profilu-firmy",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%95%D7%9C%D7%9C-%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C-%D7%97%D7%91%D7%A8%D7%94",
+        "id": "https://tools.electe.net/id/pembuat-profil-perusahaan",
+        "nl": "https://tools.electe.net/nl/bedrijfsprofielgenerator",
+        "sv": "https://tools.electe.net/sv/foretagspresentation",
+        "ro": "https://tools.electe.net/ro/generator-de-profil-de-companie",
+        "ko": "https://tools.electe.net/ko/%ED%9A%8C%EC%82%AC-%EC%86%8C%EA%B0%9C-%EC%83%9D%EC%84%B1%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E4%BC%9A%E7%A4%BE%E7%B4%B9%E4%BB%8B%E6%96%87%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "communication-plan",
+      "category": "marketing",
+      "kind": "model",
+      "name": {
+        "en": "Communication plan generator",
+        "it": "Generatore di piano di comunicazione"
+      },
+      "summary": {
+        "en": "Turn a goal into audiences, messages, a sequence and something measurable.",
+        "it": "Trasforma un obiettivo in pubblici, messaggi, una sequenza e qualcosa di misurabile."
+      },
+      "formula": {
+        "en": "No formula. A model structures your goal into a plan.",
+        "it": "Nessuna formula. Un modello struttura il tuo obiettivo in un piano."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/communication-plan-generator",
+        "it": "https://tools.electe.net/it/piano-di-comunicazione",
+        "fr": "https://tools.electe.net/fr/generateur-de-plan-de-communication",
+        "de": "https://tools.electe.net/de/generator-fur-kommunikationsplane",
+        "es": "https://tools.electe.net/es/generador-de-plan-de-comunicacion",
+        "pt": "https://tools.electe.net/pt/gerador-de-plano-de-comunicacao",
+        "zh": "https://tools.electe.net/zh/%E6%B2%9F%E9%80%9A%E8%AE%A1%E5%88%92%E7%94%9F%E6%88%90%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E6%BA%9D%E9%80%9A%E8%A8%88%E7%95%AB%E7%94%A2%E7%94%9F%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/iletisim-plani-olusturucu",
+        "ar": "https://tools.electe.net/ar/%D9%85%D9%88%D9%84%D9%91%D8%AF-%D8%AE%D8%B7%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84",
+        "uk": "https://tools.electe.net/uk/%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%BC%D1%83%D0%BD%D1%96%D0%BA%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BB%D0%B0%D0%BD%D1%83",
+        "vi": "https://tools.electe.net/vi/cong-cu-tao-ke-hoach-truyen-thong",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/generator-planu-komunikacji",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%95%D7%9C%D7%9C-%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA-%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA",
+        "id": "https://tools.electe.net/id/pembuat-rencana-komunikasi",
+        "nl": "https://tools.electe.net/nl/generator-communicatieplan",
+        "sv": "https://tools.electe.net/sv/kommunikationsplan",
+        "ro": "https://tools.electe.net/ro/generator-de-plan-de-comunicare",
+        "ko": "https://tools.electe.net/ko/%EC%BB%A4%EB%AE%A4%EB%8B%88%EC%BC%80%EC%9D%B4%EC%85%98-%ED%94%8C%EB%9E%9C-%EC%83%9D%EC%84%B1%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%A8%88%E7%94%BB%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "buyer-persona",
+      "category": "marketing",
+      "kind": "model",
+      "name": {
+        "en": "Buyer persona generator",
+        "it": "Generatore di buyer persona"
+      },
+      "summary": {
+        "en": "One buyer persona built from situation and constraints — no invented name, age or photograph.",
+        "it": "Una buyer persona costruita su situazione e vincoli — senza nome, età o foto inventati."
+      },
+      "formula": {
+        "en": "No formula. A model reasons from your product description.",
+        "it": "Nessuna formula. Un modello ragiona dalla descrizione del tuo prodotto."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/buyer-persona-generator",
+        "it": "https://tools.electe.net/it/profilazione-clienti",
+        "fr": "https://tools.electe.net/fr/generateur-de-persona-acheteur",
+        "de": "https://tools.electe.net/de/generator-fur-buyer-personas",
+        "es": "https://tools.electe.net/es/generador-de-buyer-persona",
+        "pt": "https://tools.electe.net/pt/gerador-de-buyer-persona",
+        "zh": "https://tools.electe.net/zh/%E4%B9%B0%E5%AE%B6%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90%E5%99%A8",
+        "tc": "https://tools.electe.net/tc/%E8%B2%B7%E5%AE%B6%E4%BA%BA%E7%89%A9%E8%AA%8C%E7%94%A2%E7%94%9F%E5%99%A8",
+        "tr": "https://tools.electe.net/tr/alici-persona-olusturucu",
+        "ar": "https://tools.electe.net/ar/%D9%85%D9%88%D9%84%D9%91%D8%AF-%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%8A",
+        "uk": "https://tools.electe.net/uk/%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%D0%B0-%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D1%86%D1%8F",
+        "vi": "https://tools.electe.net/vi/cong-cu-tao-chan-dung-nguoi-mua",
+        "th": "https://tools.electe.net/th/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD",
+        "pl": "https://tools.electe.net/pl/generator-persony-kupujacego",
+        "he": "https://tools.electe.net/he/%D7%9E%D7%97%D7%95%D7%9C%D7%9C-%D7%A4%D7%A8%D7%A1%D7%95%D7%A0%D7%AA-%D7%A7%D7%95%D7%A0%D7%94",
+        "id": "https://tools.electe.net/id/pembuat-buyer-persona",
+        "nl": "https://tools.electe.net/nl/buyer-personagenerator",
+        "sv": "https://tools.electe.net/sv/koparpersona",
+        "ro": "https://tools.electe.net/ro/generator-de-buyer-persona",
+        "ko": "https://tools.electe.net/ko/%EA%B5%AC%EB%A7%A4%EC%9E%90-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98-%EC%83%9D%EC%84%B1%EA%B8%B0",
+        "ja": "https://tools.electe.net/ja/%E3%83%90%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%9A%E3%83%AB%E3%82%BD%E3%83%8A%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB"
+      }
+    },
+    {
+      "id": "conflict-analysis",
+      "category": "operations",
+      "kind": "model",
+      "name": {
+        "en": "Conflict management advisor",
+        "it": "Gestione dei conflitti"
+      },
+      "summary": {
+        "en": "Separate positions from interests in a workplace conflict, and get concrete next moves.",
+        "it": "Separa le posizioni dagli interessi in un conflitto di lavoro e ottieni mosse concrete."
+      },
+      "formula": {
+        "en": "No formula. A model reads one account and structures it.",
+        "it": "Nessuna formula. Un modello legge una sola versione e la struttura."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/conflict-management-advisor",
+        "it": "https://tools.electe.net/it/gestione-dei-conflitti",
+        "fr": "https://tools.electe.net/fr/conseiller-en-gestion-des-conflits",
+        "de": "https://tools.electe.net/de/berater-fur-konfliktmanagement",
+        "es": "https://tools.electe.net/es/asesor-de-gestion-de-conflictos",
+        "pt": "https://tools.electe.net/pt/consultor-de-gestao-de-conflitos",
+        "zh": "https://tools.electe.net/zh/%E5%86%B2%E7%AA%81%E7%AE%A1%E7%90%86%E9%A1%BE%E9%97%AE",
+        "tc": "https://tools.electe.net/tc/%E8%A1%9D%E7%AA%81%E7%AE%A1%E7%90%86%E9%A1%A7%E5%95%8F",
+        "tr": "https://tools.electe.net/tr/catisma-yonetimi-danismani",
+        "ar": "https://tools.electe.net/ar/%D9%85%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%86%D8%B2%D8%A7%D8%B9%D8%A7%D8%AA",
+        "uk": "https://tools.electe.net/uk/%D0%BF%D0%BE%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA-%D0%B7-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%BD%D1%84%D0%BB%D1%96%D0%BA%D1%82%D0%B0%D0%BC%D0%B8",
+        "vi": "https://tools.electe.net/vi/co-van-xu-ly-xung-dot",
+        "th": "https://tools.electe.net/th/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B8%A3%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%82%E0%B8%B1%E0%B8%94%E0%B9%81%E0%B8%A2%E0%B9%89%E0%B8%87",
+        "pl": "https://tools.electe.net/pl/doradca-w-zarzadzaniu-konfliktem",
+        "he": "https://tools.electe.net/he/%D7%99%D7%95%D7%A2%D7%A5-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A7%D7%95%D7%A0%D7%A4%D7%9C%D7%99%D7%A7%D7%98%D7%99%D7%9D",
+        "id": "https://tools.electe.net/id/penasihat-manajemen-konflik",
+        "nl": "https://tools.electe.net/nl/adviseur-conflicthantering",
+        "sv": "https://tools.electe.net/sv/radgivare-for-konflikthantering",
+        "ro": "https://tools.electe.net/ro/consilier-pentru-gestionarea-conflictelor",
+        "ko": "https://tools.electe.net/ko/%EA%B0%88%EB%93%B1-%EA%B4%80%EB%A6%AC-%EC%A1%B0%EC%96%B8",
+        "ja": "https://tools.electe.net/ja/%E5%AF%BE%E7%AB%8B%E8%A7%A3%E6%B1%BA%E3%82%A2%E3%83%89%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC"
+      }
+    },
+    {
+      "id": "communication-review",
+      "category": "operations",
+      "kind": "model",
+      "name": {
+        "en": "Communication review",
+        "it": "Revisione di un messaggio"
+      },
+      "summary": {
+        "en": "Paste something before you send it and see how it will land.",
+        "it": "Incolla qualcosa prima di mandarlo e vedi come arriverà."
+      },
+      "formula": {
+        "en": "No formula. A model reads what you pasted.",
+        "it": "Nessuna formula. Un modello legge quello che hai incollato."
+      },
+      "series": false,
+      "inputs": [],
+      "outputs": [],
+      "url": {
+        "en": "https://tools.electe.net/communication-review",
+        "it": "https://tools.electe.net/it/competenza-relazionale",
+        "fr": "https://tools.electe.net/fr/relecture-de-communication",
+        "de": "https://tools.electe.net/de/kommunikationsprufung",
+        "es": "https://tools.electe.net/es/revision-de-comunicacion",
+        "pt": "https://tools.electe.net/pt/revisao-de-comunicacao",
+        "zh": "https://tools.electe.net/zh/%E6%B2%9F%E9%80%9A%E5%AE%A1%E9%98%85",
+        "tc": "https://tools.electe.net/tc/%E6%BA%9D%E9%80%9A%E5%85%A7%E5%AE%B9%E6%AA%A2%E8%A6%96",
+        "tr": "https://tools.electe.net/tr/iletisim-incelemesi",
+        "ar": "https://tools.electe.net/ar/%D9%85%D8%B1%D8%A7%D8%AC%D8%B9%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84",
+        "uk": "https://tools.electe.net/uk/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D1%96%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%B2%D1%96%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F",
+        "vi": "https://tools.electe.net/vi/ra-soat-noi-dung-giao-tiep",
+        "th": "https://tools.electe.net/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%97%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A3",
+        "pl": "https://tools.electe.net/pl/przeglad-komunikatu",
+        "he": "https://tools.electe.net/he/%D7%91%D7%93%D7%99%D7%A7%D7%AA-%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA",
+        "id": "https://tools.electe.net/id/tinjauan-komunikasi",
+        "nl": "https://tools.electe.net/nl/communicatiecheck",
+        "sv": "https://tools.electe.net/sv/granskning-av-kommunikation",
+        "ro": "https://tools.electe.net/ro/analiza-de-comunicare",
+        "ko": "https://tools.electe.net/ko/%EC%BB%A4%EB%AE%A4%EB%8B%88%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B2%80%ED%86%A0",
+        "ja": "https://tools.electe.net/ja/%E6%96%87%E9%9D%A2%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC"
+      }
+    }
+  ]
+}
