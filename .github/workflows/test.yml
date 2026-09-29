@@ -12,7 +12,8 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      # No lockfile is exported (the three dev dependencies float with the
+      # website's), so the install is a plain npm install.
+      - run: npm install --no-fund --no-audit
       - run: npm run typecheck
       - run: npm test
