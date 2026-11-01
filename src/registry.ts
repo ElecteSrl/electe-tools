@@ -1319,26 +1319,10 @@ export function slugIndex(): Map<string, { tool: ToolDef; locale: string }> {
 }
 
 /**
- * A route param as the app compares it: DECODED.
- *
- * Next hands `[slug]` to the page percent-ENCODED, and the registry stores
- * every slug decoded (`src/fields/slug.ts`'s rule; slugs.test.ts pins the
- * round trip). Until 2026-09-23 the tools page compared the two raw, so
- * `roi計算ツール` arrived as `roi%E8%A8%88…`, matched nothing, and every
- * tool page in the eight non-Latin locales — zh, tc, ar, uk, th, he, ko,
- * ja, 328 pages — was a 404 under an index that linked to it. Every other
- * dynamic route in the app already decodes (the main site's
- * `[...segments]`, help, the quarterly issues); this is the same rule in
- * one place. A malformed escape is not a slug: it falls through as-is and
- * matches nothing, so the page 404s it like any unknown slug.
+ * Re-exported for the tools page and the registry's tests; the rule and
+ * its history live in src/lib/decodeSlug.ts, which every dynamic route uses.
  */
-export function decodeSlug(raw: string): string {
-  try {
-    return decodeURIComponent(raw)
-  } catch {
-    return raw
-  }
-}
+export { decodeSlug } from './decodeSlug'
 
 /** The tool a slug names in a locale, falling back to the English slug. */
 export function toolBySlug(locale: string, slug: string): ToolDef | undefined {
