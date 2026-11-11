@@ -1,6 +1,6 @@
 {
   "name": "electe-tools",
-  "version": "0.2026.11.10",
+  "version": "0.2026.11.11",
   "description": "The formulas and catalog behind tools.electe.net — free business calculators, in the open.",
   "private": true,
   "type": "module",
